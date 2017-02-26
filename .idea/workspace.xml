@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5e70c167-c0dd-4a9a-b8e6-deef7b5b4c4c" name="Default" comment="" />
+    <ignored path="minitron.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/.gradle/" />
+    <ignored path="$PROJECT_DIR$/build/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="minitron" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.333">
+              <caret line="26" column="16" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="minitron" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="minitron" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="availableTasks">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the outputs of this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assemble" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the main distributions" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assembleDist" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Repackage existing JAR and WAR archives so that they can be executed from the command line using 'java -jar'" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="bootRepackage" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Run the project with support for auto-detecting main class and reloading static resources" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="bootRun" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="build" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildDependents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all buildscript dependencies declared in root project 'minitron'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildEnvironment" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects it depends on." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildNeeded" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="classes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build directory." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="clean" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles the main Groovy source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileGroovy" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles the integration Groovy source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileIntegrationGroovy" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles integration Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileIntegrationJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles main Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles the test Groovy source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileTestGroovy" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles test Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the components produced by root project 'minitron'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="components" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="copyToLib" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all dependencies declared in root project 'minitron'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the insight into a specific dependency in root project 'minitron'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependencyInsight" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependencyManagement" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Bundles the project as a distribution." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="distTar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Bundles the project as a distribution." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="distZip" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="findMainClass" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Groovydoc API documentation for the main source code." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="groovydoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays a help message." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="help" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Initializes a new Gradle build. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="init" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs the project as a JVM application along with libs and OS specific scripts." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="installApp" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs the project as a distribution as-is." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="installDist" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="integration" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles integration classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="integrationClasses" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles a jar archive containing the main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="jar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Javadoc API documentation for the main source code." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="javadoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the configuration model of root project 'minitron'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="model" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes integration resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processIntegrationResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes main resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes test resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the sub-projects of root project 'minitron'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="projects" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the properties of root project 'minitron'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="properties" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs this project as a JVM application" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="run" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="stage" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Creates OS specific scripts to run the project as a JVM application." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="startScripts" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the tasks runnable from root project 'minitron'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="tasks" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs the unit tests." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles test classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="testClasses" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates a war archive with all the compiled classes, the web-app content and the libraries." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="war" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Gradle wrapper files. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="wrapper" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="modificationStamps">
+      <map>
+        <entry key="$USER_HOME$/SpringBeanDemo" value="1474572419000" />
+        <entry key="$USER_HOME$/dhtmonitor" value="1456150209000" />
+        <entry key="$USER_HOME$/looksay" value="1487944417000" />
+        <entry key="$PROJECT_DIR$" value="1488143882000" />
+      </map>
+    </option>
+    <option name="projectBuildClasspath">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <ExternalProjectBuildClasspathPojo>
+              <option name="modulesBuildClasspath">
+                <map>
+                  <entry key="$PROJECT_DIR$">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="entries">
+                          <list>
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/4.3.6.RELEASE/45f4d3c6337a323202f4bc0a9adbd3e1d595cb18/spring-core-4.3.6.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/4.3.6.RELEASE/690da099c3c2d2536210f0fd06ff3f336de43ad9/spring-core-4.3.6.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-actuator/1.4.4.RELEASE/122233e37f544e6b70f04e03252539f445ed2c96/spring-boot-starter-actuator-1.4.4.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-actuator/1.4.4.RELEASE/e982b07261245b97c91059eb72d7b6740560b6fe/spring-boot-starter-actuator-1.4.4.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-web/1.4.4.RELEASE/516d87974e7847cff501f45b253f1f9543d2a8f2/spring-boot-starter-web-1.4.4.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-web/1.4.4.RELEASE/66f844bd63c9a02b57d0eaebeb58a124cce9bba9/spring-boot-starter-web-1.4.4.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-ws/1.4.4.RELEASE/901ba6f046716449409f2d5f33a13aa5e57ba6b1/spring-boot-starter-ws-1.4.4.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-ws/1.4.4.RELEASE/c173830f3264de6e99610cfdd35c075c8edb4579/spring-boot-starter-ws-1.4.4.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.postgresql/postgresql/9.4-1201-jdbc4/1accbd242e36ad0206dd0d8788f5ace0fd174f56/postgresql-9.4-1201-jdbc4-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.postgresql/postgresql/9.4-1201-jdbc4/7f7a680f2aa8fe5d511c5cf5f78fa3a297a8e52b/postgresql-9.4-1201-jdbc4.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy.modules.http-builder/http-builder/0.7.1/a7396f0103337835621526d95021afc06c65c7b2/http-builder-0.7.1-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy.modules.http-builder/http-builder/0.7.1/a21771ae3da5ce9f5c4d7a60c1e716666aa2acf9/http-builder-0.7.1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/cglib/cglib-nodep/2.2/962f2bbd66901a9d67b0bb3c8c4a64ce6de0a8c4/cglib-nodep-2.2-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/cglib/cglib-nodep/2.2/59afed7ab65e7ec6585d5bc60556c3cbd203532b/cglib-nodep-2.2.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-all/2.4.1/e9da581b03a94acef97004906caba37bcfa59c5d/groovy-all-2.4.1-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-all/2.4.1/a9ca9c9de09361ec2a18d2c058d2524fbd8eae0c/groovy-all-2.4.1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter/1.4.4.RELEASE/e29abb362513eed5b4bf43d0291caa064ad894a1/spring-boot-starter-1.4.4.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter/1.4.4.RELEASE/71348c5eb769898f5fb43778cc3b2b41cd47ed85/spring-boot-starter-1.4.4.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-actuator/1.4.4.RELEASE/cf7e2b93d4f175fd039a3038be668739510f1c8f/spring-boot-actuator-1.4.4.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-actuator/1.4.4.RELEASE/c2d617c3abe025ef8f13c677e34cdd6047d8c4bd/spring-boot-actuator-1.4.4.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-tomcat/1.4.4.RELEASE/f9ae719acf48225f22606269ce4dbb375ba0eb25/spring-boot-starter-tomcat-1.4.4.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-tomcat/1.4.4.RELEASE/8c30a7786c4a8f9c66ef4f13125b4babbdbe71cb/spring-boot-starter-tomcat-1.4.4.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-validator/5.2.4.Final/b02d7b80cdadbfc51106252238fc1a667c8287eb/hibernate-validator-5.2.4.Final-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-validator/5.2.4.Final/fb18766b576aa6632bcfe9a20a023cbd52bf9769/hibernate-validator-5.2.4.Final.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.8.6/b4fa0bfb592813e6753f25719501cf6f803a2bd1/jackson-databind-2.8.6-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.8.6/c43de61f74ecc61322ef8f402837ba65b0aa2bf4/jackson-databind-2.8.6.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/4.3.6.RELEASE/e41b15afc71764f982eec257729ac3fddda78f3e/spring-web-4.3.6.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/4.3.6.RELEASE/8b8bf8fc6ed4acd5ae0baa6179f1cccc52aaa9aa/spring-web-4.3.6.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/4.3.6.RELEASE/51719142a860240ba4648bb6384e5653bffc82e9/spring-webmvc-4.3.6.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/4.3.6.RELEASE/ea55690d6d61ad70e2569db1e1add1603e427862/spring-webmvc-4.3.6.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-oxm/4.3.6.RELEASE/790e0564eadab44fda7ea7eb01822a95fdd08716/spring-oxm-4.3.6.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-oxm/4.3.6.RELEASE/4a9013418b85272eaa34f50844a4d48dfb1a9435/spring-oxm-4.3.6.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.ws/spring-ws-core/2.3.1.RELEASE/53ec03badcf9a66dbe2b9a701fdd62085793facf/spring-ws-core-2.3.1.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.ws/spring-ws-core/2.3.1.RELEASE/6c3607f29ac171c93024c387c524a83298314773/spring-ws-core-2.3.1.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.2/b9f9e3e5255b6ddc3bf21be05428c7a60d00e042/httpclient-4.5.2-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.2/733db77aa8d9b2d68015189df76ab06304406e50/httpclient-4.5.2.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.json-lib/json-lib/2.3/f35340c0a0380141f62c72b76c8fb4bfa638d8c1/json-lib-2.3-jdk15.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sourceforge.nekohtml/nekohtml/1.9.22/88eb858a017e4a4ba762a9968da59ed57fc08898/nekohtml-1.9.22-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sourceforge.nekohtml/nekohtml/1.9.22/4f54af68ecb345f2453fb6884672ad08414154e3/nekohtml-1.9.22.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/xml-resolver/xml-resolver/1.2/6b72432ea1c5296783007365bb7c9a6b39dfb730/xml-resolver-1.2-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/xml-resolver/xml-resolver/1.2/3d0f97750b3a03e0971831566067754ba4bfd68c/xml-resolver-1.2.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/1.4.4.RELEASE/3183e9ce9edb77036bd44caef4e228d2f071b3da/spring-boot-1.4.4.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/1.4.4.RELEASE/7d324f87e009426568116d685ca2f9fd759bf8b/spring-boot-1.4.4.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/1.4.4.RELEASE/c2239e2eaad72ebbedeeec9fe929752f4a0c5fb3/spring-boot-autoconfigure-1.4.4.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/1.4.4.RELEASE/4f30e96a8ea8fcc960c458b9da0826e66909876e/spring-boot-autoconfigure-1.4.4.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-logging/1.4.4.RELEASE/652a74a626237dbd4668e952efdc3e46347f7436/spring-boot-starter-logging-1.4.4.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-logging/1.4.4.RELEASE/64f090a1c417fa559b1041daa3c0a9ded611be7f/spring-boot-starter-logging-1.4.4.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.17/63577e87886c76228db9f8a2c50ea43cde5072eb/snakeyaml-1.17-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.17/7a27ea250c5130b2922b86dea63cbb1cc10a660c/snakeyaml-1.17.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/4.3.6.RELEASE/49943c4c9945a5a4e256d7e360ad3872696a769e/spring-context-4.3.6.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/4.3.6.RELEASE/5f3041020113e3202a7ae9defe36e7b5d2fb87eb/spring-context-4.3.6.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/8.5.11/83cbe61a663259e7ef33943810ac328cfacfc67b/tomcat-embed-core-8.5.11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/8.5.11/72761f51fc7cef3ee19d4aafc7adc605df9f611f/tomcat-embed-core-8.5.11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-el/8.5.11/9fced5b3e9abd64d82df145bb1985ba52cf7e040/tomcat-embed-el-8.5.11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-el/8.5.11/60253815b897166903bf5ec41219c5bb15333a69/tomcat-embed-el-8.5.11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-websocket/8.5.11/d5b140d178a7ce02dc1877c9c2a97d71c8b9bc7c/tomcat-embed-websocket-8.5.11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-websocket/8.5.11/dfa65e7857d46630761c0571758a56f7cbd1e9ba/tomcat-embed-websocket-8.5.11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.validation/validation-api/1.1.0.Final/7d49b53caed9bd81d172807c3e096d24f3c57090/validation-api-1.1.0.Final-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.validation/validation-api/1.1.0.Final/8613ae82954779d518631e05daa73a6a954817d5/validation-api-1.1.0.Final.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.logging/jboss-logging/3.3.0.Final/3625e6818158ddb4754fa2ec51299e5f57e596b4/jboss-logging-3.3.0.Final-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.logging/jboss-logging/3.3.0.Final/3616bb87707910296e2c195dc016287080bba5af/jboss-logging-3.3.0.Final.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml/classmate/1.3.3/959904631fc3caef02ab82c4ee31c6882b910b12/classmate-1.3.3-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml/classmate/1.3.3/864c8e370a691e343210cc7c532fc198cee460d8/classmate-1.3.3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.8.6/8acbd4826b72e103ff79e201182dc98b3a2b47e9/jackson-annotations-2.8.6-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.8.6/9577018f9ce3636a2e1cb0a0c7fe915e5098ded5/jackson-annotations-2.8.6.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.8.6/36af810d532d0b79feb391519efddce81f0afa7/jackson-core-2.8.6-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.8.6/2ef7b1cc34de149600f5e75bc2d5bf40de894e60/jackson-core-2.8.6.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/4.3.6.RELEASE/c6d15c225b300c981060c8c2beb26bf4a8914232/spring-aop-4.3.6.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/4.3.6.RELEASE/d70b2393d380cd468d9a14969efaf9022c67c0/spring-aop-4.3.6.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/4.3.6.RELEASE/9a93dd1daa209146297f0d0a1ba900be43cbee50/spring-beans-4.3.6.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/4.3.6.RELEASE/1585715ed598b76a23dac931c27aa039b189eafb/spring-beans-4.3.6.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/4.3.6.RELEASE/ba3bb5030b02ded635044da772c27fce7220523f/spring-expression-4.3.6.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/4.3.6.RELEASE/13b53568cfd7b308e70efcbac6cdd0c5d597ba1/spring-expression-4.3.6.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.ws/spring-xml/2.3.1.RELEASE/702e6a048640d9108e45a59523ad63836fc8fe7/spring-xml-2.3.1.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.ws/spring-xml/2.3.1.RELEASE/6dbd6f848e28b32ed4c939b4d3bda218cb207a5b/spring-xml-2.3.1.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.6/57cc0a7af46d66754e632bddc558a913b9e66ac3/httpcore-4.4.6-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.6/e3fd8ced1f52c7574af952e2e6da0df8df08eb82/httpcore-4.4.6.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/ecf26c7507d67782a3bbd148d170b31dfad001aa/commons-logging-1.2-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.10/11fb3d88ae7e3b757d70237064210ceb954a5a04/commons-codec-1.10-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.10/4b95f4897fa13f2cd904aee711aeafc0c5295cd8/commons-codec-1.10.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-beanutils/commons-beanutils/1.9.3/9d70af7c5982bd09c33efa97ac98cee6363ba0f0/commons-beanutils-1.9.3-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-beanutils/commons-beanutils/1.9.3/c845703de334ddc6b4b3cd26835458cb1cba1f3d/commons-beanutils-1.9.3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-collections/commons-collections/3.2.2/78c50ebda5784937ca1615fc0e1d0cb35857d572/commons-collections-3.2.2-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-collections/commons-collections/3.2.2/8ad72fe39fa8c91eaaf12aadb21e0c3661fe26d5/commons-collections-3.2.2.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-lang/commons-lang/2.4/2b8c4b3035e45520ef42033e823c7d33e4b4402c/commons-lang-2.4-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-lang/commons-lang/2.4/16313e02a793435009f1e458fa4af5d879f6fb11/commons-lang-2.4.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.ezmorph/ezmorph/1.0.6/298992280d62b944afd0ae9bfe3329f5487dd434/ezmorph-1.0.6-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.ezmorph/ezmorph/1.0.6/1e55d2a0253ea37745d33062852fd2c90027432/ezmorph-1.0.6.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/xerces/xercesImpl/2.11.0/af86e59459a503adec5e9b47426dd9fa2ac5f1f6/xercesImpl-2.11.0-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/xerces/xercesImpl/2.11.0/9bb329db1cfc4e22462c9d6b43a8432f5850e92c/xercesImpl-2.11.0.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.1.9/247b33c9bb67469a0a77543691859c1fb34fb8be/logback-classic-1.1.9-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.1.9/978cd9fbb43b7abed6379d7b02de052d216e30fc/logback-classic-1.1.9.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/jcl-over-slf4j/1.7.22/b03a290ee39cf7c2eed57a73402ce25d9f76ff00/jcl-over-slf4j-1.7.22-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/jcl-over-slf4j/1.7.22/86ceac14535af5a42c8fb0d06d79b925dd3cb263/jcl-over-slf4j-1.7.22.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/jul-to-slf4j/1.7.22/d2158381996b93b2463199e0f6fd3bbdab8bed37/jul-to-slf4j-1.7.22-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/jul-to-slf4j/1.7.22/b0429e950b3d2bc2c39c1bacafac753edbe3781c/jul-to-slf4j-1.7.22.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/log4j-over-slf4j/1.7.22/8a3cc85e3fbf330e2463142047cc38fba3ad1886/log4j-over-slf4j-1.7.22-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/log4j-over-slf4j/1.7.22/a527c37e9ca6c3d19ba298edd4aa344ca751a203/log4j-over-slf4j-1.7.22.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/xml-apis/xml-apis/1.4.01/5502da0c4c0a7916a604356ef19394ccfa30cd4b/xml-apis-1.4.01-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/xml-apis/xml-apis/1.4.01/3789d9fada2d3d458c4ba2de349d48780f381ee3/xml-apis-1.4.01.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.1.9/cd472361a8018f1fa2acef571486bb9fb96b8cf3/logback-core-1.1.9-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.1.9/e05d0cb67220937c32d7b4e5a47f967605376f63/logback-core-1.1.9.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.22/2b9722cdf33bd0b1d1639a98034dde38b156ad34/slf4j-api-1.7.22-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.22/a1c83373863cec7ae8d89dc1c5722d8cb6ec0309/slf4j-api-1.7.22.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-gradle-plugin/1.4.4.RELEASE/802432172f0afa4691cdfe34e95cc49cd6efaa93/spring-boot-gradle-plugin-1.4.4.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-gradle-plugin/1.4.4.RELEASE/f21cb48aaa492fe35e56b9b8fdb00d9ad7c395ca/spring-boot-gradle-plugin-1.4.4.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-loader-tools/1.4.4.RELEASE/fe87096363a0f2a6f687b5708b9c0438b159c8fb/spring-boot-loader-tools-1.4.4.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-loader-tools/1.4.4.RELEASE/e730f335fa15795b51a4a45d47e01f8862dd4a33/spring-boot-loader-tools-1.4.4.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.spring.gradle/dependency-management-plugin/0.6.1.RELEASE/d324f1dab8d15e9e55507d9981de9e2b6f0b1c78/dependency-management-plugin-0.6.1.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.spring.gradle/dependency-management-plugin/0.6.1.RELEASE/46cb985239502be3dcb94e0df45f797804e95fb8/dependency-management-plugin-0.6.1.RELEASE.jar" />
+                          </list>
+                        </option>
+                        <option name="path" value="$PROJECT_DIR$" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="name" value="minitron" />
+              <option name="projectBuildClasspath">
+                <list>
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/ant-1.9.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/ant-launcher-1.9.3.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/gradle-base-services-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/gradle-base-services-groovy-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/gradle-cli-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/gradle-core-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/gradle-docs-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/gradle-launcher-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/gradle-messaging-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/gradle-model-core-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/gradle-model-groovy-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/gradle-native-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/gradle-open-api-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/gradle-resources-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/gradle-tooling-api-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/gradle-ui-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/gradle-wrapper-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/groovy-all-2.4.4.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-announce-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-antlr-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-build-comparison-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-build-init-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-code-quality-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-dependency-management-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-diagnostics-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-ear-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-ide-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-ide-native-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-ivy-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-jacoco-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-javascript-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-jetty-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-language-groovy-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-language-java-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-language-jvm-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-language-native-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-language-scala-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-maven-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-osgi-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-platform-base-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-platform-jvm-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-platform-native-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-platform-play-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-plugin-development-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-plugin-use-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-plugins-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-publish-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-reporting-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-resources-http-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-resources-s3-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-resources-sftp-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-scala-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-signing-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-sonar-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-test-kit-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-testing-base-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-testing-jvm-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-testing-native-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/gradle-tooling-api-builders-2.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-2.12-bin/avhnk0p45wmm16bas931at19r/gradle-2.12/lib/plugins/ivy-2.2.0.jar" />
+                  <option value="$PROJECT_DIR$/buildSrc/src/main/java" />
+                  <option value="$PROJECT_DIR$/buildSrc/src/main/groovy" />
+                </list>
+              </option>
+            </ExternalProjectBuildClasspathPojo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/build.gradle" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="186" />
+    <option name="y" value="185" />
+    <option name="width" value="2275" />
+    <option name="height" value="1174" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minitron" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minitron" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minitron" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5e70c167-c0dd-4a9a-b8e6-deef7b5b4c4c" name="Default" comment="" />
+      <created>1488143969949</created>
+      <option name="number" value="Default" />
+      <updated>1488143969949</updated>
+      <workItem from="1488143975042" duration="33000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="33000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="186" y="185" width="2275" height="1174" extended-state="1" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24988805" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.333">
+          <caret line="26" column="16" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

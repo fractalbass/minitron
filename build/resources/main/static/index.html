@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+    <TITLE>Look-Say example.</TITLE>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <Script type="application/javascript">
+        $(function() {
+            $("#looksay").click(function () {
+                $("#output").html('');
+                requestUrl = "/looksay/" + $("#startNum").val() + "/" + $("#numrows").val();
+                $.ajax({
+                    url: requestUrl, success: function (result) {
+                        result.forEach( function(s) {
+                            $("#output").append(s).append("<br>");
+                        });
+
+                    }
+                });
+            });
+        });
+    </Script>
+</HEAD>
+<BODY>
+<DIV>
+    <h2>Painted Harmony Group &quot;looksay&quot; Spring Boot App</h2>
+    ...by Miles Porter, May 13, 2016<br><br><br>
+    If you think this is cool, be sure to check out <a href="http://adventofcode.com">Adevnt Of Code.</a><br><br>
+    Thanks to Andy, Zach and Adam for turning me on to this.  If you'd like to see the code,
+    it is available on <a href="http://github.com/fractalbass/looksay">github</a>.<br><br>
+
+    Specify the number to start with and how many lines to generate and the click GO!<br>
+
+    <table>
+    <tr><td>Starting value:</td><td><input type="number" id="startNum"/></td></tr>
+    <tr><td>Number of rows:</td><td><input type="number" id="numrows"/></td></tr>
+    </table>
+    <button id="looksay">GO!</button>
+
+</DIV>
+<DIV id="output">
+</DIV>
+</BODY>
+</HTML>

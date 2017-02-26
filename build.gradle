@@ -1,0 +1,81 @@
+apply plugin: "groovy"
+apply plugin: "application"
+apply plugin: 'war'
+apply plugin: 'idea'
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+
+buildscript {
+	ext {
+		springBootVersion = '1.4.4.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}") 
+	}
+}
+
+mainClassName = "com.phg.minitron.MinitronApplication"
+
+
+jar {
+	baseName = 'minitron'
+	version = '0.0.1-SNAPSHOT'
+}
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+
+sourceSets {
+	integration {
+		compileClasspath += main.output + test.output
+		runtimeClasspath += main.output + test.output
+	}
+}
+
+configurations {
+	providedRuntime
+}
+
+configurations {
+	integrationCompile.extendsFrom testCompile
+	integrationRuntime.extendsFrom testRuntime
+}
+
+task integration(type: Test) {
+	testClassesDir = sourceSets.integration.output.classesDir
+	classpath = sourceSets.integration.runtimeClasspath
+}
+
+task stage {
+	dependsOn build
+}
+
+task copyToLib(type: Copy) {
+	into "$buildDir/lib"
+	from(configurations.compile)
+}
+
+stage.dependsOn(copyToLib)
+
+dependencies {
+
+
+	compile('org.springframework.boot:spring-boot-starter-actuator')
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.boot:spring-boot-starter-ws')
+	compile('org.postgresql:postgresql:9.4-1201-jdbc4')
+	compile group: 'org.codehaus.groovy.modules.http-builder', name: 'http-builder', version: '0.7.1'
+	compile group: 'cglib', name: 'cglib-nodep', version: '2.2'
+	compile 'org.codehaus.groovy:groovy-all:2.4.1'
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+	testCompile('org.spockframework:spock-core:1.1-groovy-2.4-rc-1')
+	testCompile('org.spockframework:spock-spring:1.1-groovy-2.4-rc-1')
+}
+
