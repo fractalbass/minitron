@@ -23,3 +23,6 @@ blog/bin/
 **/.idea
 **/.gradle
 
+#Build
+build/*
+
