@@ -2,28 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e70c167-c0dd-4a9a-b8e6-deef7b5b4c4c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/model/User.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/service/UserService.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/phg/minitron/MinitronApplication.class" afterPath="$PROJECT_DIR$/build/classes/main/com/phg/minitron/MinitronApplication.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/phg/minitron/controller/MessageController.class" afterPath="$PROJECT_DIR$/build/classes/main/com/phg/minitron/controller/MessageController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/phg/minitron/dao/BaseDao.class" afterPath="$PROJECT_DIR$/build/classes/main/com/phg/minitron/dao/BaseDao.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/model/Device.groovy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/service/DeviceService.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/phg/minitron/dao/DeviceDao.class" afterPath="$PROJECT_DIR$/build/classes/main/com/phg/minitron/dao/DeviceDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/phg/minitron/dao/MessageDao.class" afterPath="$PROJECT_DIR$/build/classes/main/com/phg/minitron/dao/MessageDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/phg/minitron/dao/UserDao.class" afterPath="$PROJECT_DIR$/build/classes/main/com/phg/minitron/dao/UserDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/phg/minitron/model/Message.class" afterPath="$PROJECT_DIR$/build/classes/main/com/phg/minitron/model/Message.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/phg/minitron/service/MessageService.class" afterPath="$PROJECT_DIR$/build/classes/main/com/phg/minitron/service/MessageService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/com/phg/minitron/com/phg/minitron/controller/MessageControllerSpec.class" afterPath="$PROJECT_DIR$/build/classes/test/com/phg/minitron/com/phg/minitron/controller/MessageControllerSpec.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/com/phg/minitron/dao/DeviceDaoSpec.class" afterPath="$PROJECT_DIR$/build/classes/test/com/phg/minitron/dao/DeviceDaoSpec.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/com/phg/minitron/dao/MessageDaoSpec$__spock_feature_0_2_closure1.class" afterPath="$PROJECT_DIR$/build/classes/test/com/phg/minitron/dao/MessageDaoSpec$__spock_feature_0_2_closure1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/com/phg/minitron/dao/MessageDaoSpec.class" afterPath="$PROJECT_DIR$/build/classes/test/com/phg/minitron/dao/MessageDaoSpec.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/com/phg/minitron/dao/UserDaoSpec.class" afterPath="$PROJECT_DIR$/build/classes/test/com/phg/minitron/dao/UserDaoSpec.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/com/phg/minitron/service/DeviceServiceSpec.class" afterPath="$PROJECT_DIR$/build/classes/test/com/phg/minitron/service/DeviceServiceSpec.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/com/phg/minitron/service/MessageServiceSpec.class" afterPath="$PROJECT_DIR$/build/classes/test/com/phg/minitron/service/MessageServiceSpec.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/com/phg/minitron/service/UserServiceSpec.class" afterPath="$PROJECT_DIR$/build/classes/test/com/phg/minitron/service/UserServiceSpec.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/dao/UserDao.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/dao/UserDao.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/groovy/com/phg/minitron/service/UserServiceSpec.groovy" afterPath="$PROJECT_DIR$/src/test/groovy/com/phg/minitron/service/UserServiceSpec.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/dao/DeviceDao.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/dao/DeviceDao.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/groovy/com/phg/minitron/service/DeviceServiceSpec.groovy" afterPath="$PROJECT_DIR$/src/test/groovy/com/phg/minitron/service/DeviceServiceSpec.groovy" />
     </list>
     <ignored path="minitron.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,14 +65,60 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserServiceSpec.groovy" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserServiceSpec.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/groovy/com/phg/minitron/service/UserServiceSpec.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8637016">
+            <state vertical-scroll-proportion="0.0">
               <caret line="72" column="47" selection-start-line="72" selection-start-column="47" selection-end-line="72" selection-end-column="47" />
               <folding>
                 <element signature="e#34#69#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeviceServiceSpec.groovy" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/groovy/com/phg/minitron/service/DeviceServiceSpec.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5069204">
+              <caret line="99" column="78" selection-start-line="99" selection-start-column="78" selection-end-line="99" selection-end-column="78" />
+              <folding>
+                <element signature="e#34#71#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeviceDao.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/dao/DeviceDao.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+              <folding>
+                <element signature="e#30#66#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeviceService.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/service/DeviceService.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+              <folding>
+                <element signature="e#34#71#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Device.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/model/Device.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -610,6 +642,10 @@
         <option value="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/service/UserService.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/dao/UserDao.groovy" />
         <option value="$PROJECT_DIR$/src/test/groovy/com/phg/minitron/service/UserServiceSpec.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/model/Device.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/dao/DeviceDao.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/service/DeviceService.groovy" />
+        <option value="$PROJECT_DIR$/src/test/groovy/com/phg/minitron/service/DeviceServiceSpec.groovy" />
       </list>
     </option>
   </component>
@@ -626,10 +662,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="186" />
-    <option name="y" value="185" />
-    <option name="width" value="2275" />
-    <option name="height" value="1174" />
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="810" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -719,6 +754,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minitron" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minitron" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="groovy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minitron" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -897,12 +962,95 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
   </component>
   <component name="RunManager" selected="JUnit.All in minitron">
-    <configuration default="false" name="All in minitron" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="false" name="DeviceServiceSpec.I can de-associate a device from a user" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.phg.minitron.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <module name="minitron" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.phg.minitron.service" />
+      <option name="MAIN_CLASS_NAME" value="com.phg.minitron.service.DeviceServiceSpec" />
+      <option name="METHOD_NAME" value="I can de-associate a device from a user" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="DeviceServiceSpec.I can get a list of all devices" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.phg.minitron.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="minitron" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.phg.minitron.service" />
+      <option name="MAIN_CLASS_NAME" value="com.phg.minitron.service.DeviceServiceSpec" />
+      <option name="METHOD_NAME" value="I can get a list of all devices" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="DeviceServiceSpec.I can get a list of all non-associated devices" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.phg.minitron.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="minitron" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.phg.minitron.service" />
+      <option name="MAIN_CLASS_NAME" value="com.phg.minitron.service.DeviceServiceSpec" />
+      <option name="METHOD_NAME" value="I can get a list of all non-associated devices" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="com.phg.minitron.service in minitron" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.phg.minitron.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="minitron" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.phg.minitron.service" />
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="package" />
@@ -918,72 +1066,15 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="UserServiceSpec.I can register a user" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.phg.minitron.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration default="false" name="All in minitron" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="minitron" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.phg.minitron.service" />
-      <option name="MAIN_CLASS_NAME" value="com.phg.minitron.service.UserServiceSpec" />
-      <option name="METHOD_NAME" value="I can register a user" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="UserServiceSpec.I can authenticate a user" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.phg.minitron.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="minitron" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.phg.minitron.service" />
-      <option name="MAIN_CLASS_NAME" value="com.phg.minitron.service.UserServiceSpec" />
-      <option name="METHOD_NAME" value="I can authenticate a user" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="UserServiceSpec.I can reset my password" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.phg.minitron.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="minitron" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.phg.minitron.service" />
-      <option name="MAIN_CLASS_NAME" value="com.phg.minitron.service.UserServiceSpec" />
-      <option name="METHOD_NAME" value="I can reset my password" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -1413,18 +1504,20 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.All in minitron" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.UserServiceSpec.I can register a user" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.UserServiceSpec.I can authenticate a user" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.UserServiceSpec.I can reset my password" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.DeviceServiceSpec.I can de-associate a device from a user" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.DeviceServiceSpec.I can get a list of all devices" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.DeviceServiceSpec.I can get a list of all non-associated devices" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.com.phg.minitron.service in minitron" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.All in minitron" />
     </list>
     <recent_temporary>
-      <list size="4">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.All in minitron" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.UserServiceSpec.I can reset my password" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.UserServiceSpec.I can authenticate a user" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.UserServiceSpec.I can register a user" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.com.phg.minitron.service in minitron" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.DeviceServiceSpec.I can get a list of all non-associated devices" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.DeviceServiceSpec.I can get a list of all devices" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.DeviceServiceSpec.I can de-associate a device from a user" />
       </list>
     </recent_temporary>
   </component>
@@ -1435,61 +1528,61 @@
       <created>1488143969949</created>
       <option name="number" value="Default" />
       <updated>1488143969949</updated>
-      <workItem from="1488143975042" duration="2337000" />
+      <workItem from="1488143975042" duration="4967000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserServiceSpec_I_can_authenticate_a_user - 2017.02.26 at 16h 42m 32s.xml">
-      <configuration name="UserServiceSpec.I can authenticate a user" configurationId="JUnit" />
+    <history-entry file="DeviceServiceSpec_I_can_associate_a_device_to_a_user - 2017.02.27 at 06h 55m 54s.xml">
+      <configuration name="DeviceServiceSpec.I can associate a device to a user" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceSpec_I_can_authenticate_a_user - 2017.02.26 at 16h 44m 12s.xml">
-      <configuration name="UserServiceSpec.I can authenticate a user" configurationId="JUnit" />
+    <history-entry file="DeviceServiceSpec_I_can_associate_a_device_to_a_user - 2017.02.27 at 06h 56m 56s.xml">
+      <configuration name="DeviceServiceSpec.I can associate a device to a user" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceSpec_I_can_authenticate_a_user - 2017.02.26 at 16h 44m 46s.xml">
-      <configuration name="UserServiceSpec.I can authenticate a user" configurationId="JUnit" />
+    <history-entry file="DeviceServiceSpec_I_can_associate_a_device_to_a_user - 2017.02.27 at 06h 58m 00s.xml">
+      <configuration name="DeviceServiceSpec.I can associate a device to a user" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceSpec_I_can_authenticate_a_user - 2017.02.26 at 16h 45m 28s.xml">
-      <configuration name="UserServiceSpec.I can authenticate a user" configurationId="JUnit" />
+    <history-entry file="DeviceServiceSpec_I_can_associate_a_device_to_a_user - 2017.02.27 at 06h 59m 17s.xml">
+      <configuration name="DeviceServiceSpec.I can associate a device to a user" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceSpec_I_can_register_a_user - 2017.02.26 at 16h 36m 01s.xml">
-      <configuration name="UserServiceSpec.I can register a user" configurationId="JUnit" />
+    <history-entry file="DeviceServiceSpec_I_can_de-associate_a_device_from_a_user - 2017.02.27 at 07h 01m 08s.xml">
+      <configuration name="DeviceServiceSpec.I can de-associate a device from a user" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceSpec_I_can_register_a_user - 2017.02.26 at 16h 36m 28s.xml">
-      <configuration name="UserServiceSpec.I can register a user" configurationId="JUnit" />
+    <history-entry file="DeviceServiceSpec_I_can_get_a_list_of_all_devices - 2017.02.27 at 07h 03m 03s.xml">
+      <configuration name="DeviceServiceSpec.I can get a list of all devices" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceSpec_I_can_register_a_user - 2017.02.26 at 16h 37m 03s.xml">
-      <configuration name="UserServiceSpec.I can register a user" configurationId="JUnit" />
+    <history-entry file="DeviceServiceSpec_I_can_get_a_list_of_all_devices - 2017.02.27 at 07h 04m 18s.xml">
+      <configuration name="DeviceServiceSpec.I can get a list of all devices" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceSpec_I_can_reset_my_password - 2017.02.26 at 16h 51m 32s.xml">
-      <configuration name="UserServiceSpec.I can reset my password" configurationId="JUnit" />
+    <history-entry file="DeviceServiceSpec_I_can_get_a_list_of_all_non-associated_devices - 2017.02.27 at 07h 06m 16s.xml">
+      <configuration name="DeviceServiceSpec.I can get a list of all non-associated devices" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceSpec_I_can_reset_my_password - 2017.02.26 at 16h 52m 08s.xml">
-      <configuration name="UserServiceSpec.I can reset my password" configurationId="JUnit" />
+    <history-entry file="DeviceServiceSpec_I_can_get_a_list_of_all_non-associated_devices - 2017.02.27 at 07h 06m 43s.xml">
+      <configuration name="DeviceServiceSpec.I can get a list of all non-associated devices" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceSpec_I_can_reset_my_password - 2017.02.26 at 16h 52m 41s.xml">
-      <configuration name="UserServiceSpec.I can reset my password" configurationId="JUnit" />
+    <history-entry file="com_phg_minitron_service_in_minitron - 2017.02.27 at 07h 06m 56s.xml">
+      <configuration name="com.phg.minitron.service in minitron" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2337000" />
+    <option name="totallyTimeSpent" value="4967000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="186" y="185" width="2275" height="1174" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="810" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32729805" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32994455" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15598886" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17270195" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24988805" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26037195" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1498,7 +1591,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39972144" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1511,7 +1604,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/groovy/com/phg/minitron/service/DeviceServiceSpec.groovy</url>
+          <line>32</line>
+          <properties />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1573,10 +1675,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/groovy/com/phg/minitron/service/UserServiceSpec.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8637016">
+        <state vertical-scroll-proportion="0.0">
           <caret line="72" column="47" selection-start-line="72" selection-start-column="47" selection-end-line="72" selection-end-column="47" />
           <folding>
             <element signature="e#34#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/model/Device.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/dao/DeviceDao.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="e#30#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/service/DeviceService.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+          <folding>
+            <element signature="e#34#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/groovy/com/phg/minitron/service/DeviceServiceSpec.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5069204">
+          <caret line="99" column="78" selection-start-line="99" selection-start-column="78" selection-end-line="99" selection-end-column="78" />
+          <folding>
+            <element signature="e#34#71#0" expanded="true" />
           </folding>
         </state>
       </provider>
