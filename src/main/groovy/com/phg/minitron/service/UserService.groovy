@@ -30,11 +30,11 @@ class UserService {
     }
 
     def authenticateUser(User user) {
-        return userDao.getUserByEmailAndPassword(user.email, user.password)
+        return userDao.getUser(user)
     }
 
     def resetPassword(User user, String newPassword) {
-        User u = userDao.getUserByEmailAndPassword(user.email, user.password)
+        User u = userDao.getUser(user)
         u.password = newPassword
         userDao.update(u)
         u

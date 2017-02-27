@@ -48,7 +48,7 @@ class UserServiceSpec extends Specification{
 
         then:
         authUser!=null
-        1 * userDao.getUserByEmailAndPassword("some@Email.com", "somePassword") >> authenticatedUser
+        1 * userDao.getUser(user) >> authenticatedUser
         0 * _
 
     }
@@ -57,7 +57,8 @@ class UserServiceSpec extends Specification{
     def 'I can reset my password'() {
         given:
         def uuid = UUID.randomUUID()
-        User user = new User(email: "some@Email.com", password: "somePassword", userId: uuid)
+        User unauthUser = new User(email: "some@Email.com", password: "somePassword")
+        User user =       new User(email: "some@Email.com", password: "somePassword", userId: uuid)
         User updatedUser = new User(email: "some@Email.com", password: "somePassword", userId: uuid)
         userService.metaClass.getUuid = {
             uuid
@@ -69,7 +70,7 @@ class UserServiceSpec extends Specification{
         then:
         registeredUser.userId == uuid
         registeredUser.password == "newPassword"
-        1 * userDao.getUserByEmailAndPassword('some@Email.com', 'somePassword') >> user
+        1 * userDao.getUser(_) >> user
         1 * userDao.update(user) >> updatedUser
         0 * _
     }
