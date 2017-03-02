@@ -5,8 +5,8 @@ package com.phg.minitron.model
  */
 class Device {
 
-    def deviceCode
-    def deviceId
-    def userId
+    String deviceCode
+    String deviceId
+    String userId
 
 }
