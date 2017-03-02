@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.phg.minitron.dao.MessageDaoSpec" tests="4" skipped="0" failures="0" errors="0" timestamp="2017-03-02T14:32:08" hostname="Miles-2015-Mac-Book-Pro.local" time="0.076">
+<testsuite name="com.phg.minitron.dao.MessageDaoSpec" tests="4" skipped="0" failures="0" errors="0" timestamp="2017-03-02T19:55:51" hostname="Miles-2015-Mac-Book-Pro.local" time="0.073">
   <properties/>
-  <testcase name="I should be able to create a message if no message exists" classname="com.phg.minitron.dao.MessageDaoSpec" time="0.048"/>
-  <testcase name="I should be able to update an existing message" classname="com.phg.minitron.dao.MessageDaoSpec" time="0.001"/>
-  <testcase name="I should be able to get a message" classname="com.phg.minitron.dao.MessageDaoSpec" time="0.026"/>
+  <testcase name="I should be able to create a message if no message exists" classname="com.phg.minitron.dao.MessageDaoSpec" time="0.046"/>
+  <testcase name="I should be able to update an existing message" classname="com.phg.minitron.dao.MessageDaoSpec" time="0.002"/>
+  <testcase name="I should be able to get a message" classname="com.phg.minitron.dao.MessageDaoSpec" time="0.024"/>
   <testcase name="I should be able to delete a message" classname="com.phg.minitron.dao.MessageDaoSpec" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

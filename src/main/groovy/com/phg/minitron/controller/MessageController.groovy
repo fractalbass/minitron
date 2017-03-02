@@ -21,20 +21,22 @@ class MessageController {
         return messageService.get(msg)
     }
 
-    @RequestMapping(value = "/message/{device}/{channel}", method = RequestMethod.POST)
-    public ResponseEntity<String> getMessage(@PathVariable int device, @PathVariable int channel, @RequestBody String message) {
-        boolean result = messageService.createOrUpdate(new Message(device: device, channel: channel, message: message))
+    @RequestMapping(value = "/message", method = RequestMethod.POST)
+    public ResponseEntity<String> getMessage(@RequestBody Message message) {
+        boolean result = messageService.createOrUpdate(new Message(device: message.device, channel: message.channel, messageText: message.messageText))
+        def ResponseEntity<String> resp
         if (result) {
-            return "OK"
+            resp = new ResponseEntity<String>("OK", HttpStatus.CREATED)
         } else {
-            return "FAILED"
+            resp = new ResponseEntity<String>("FAILED", HttpStatus.INTERNAL_SERVER_ERROR)
 
         }
+        return resp
     }
 
     @RequestMapping(value = "/message/health", method = RequestMethod.GET)
     public ResponseEntity<String> getHealth() {
-        return new ResponseEntity<String>("OK", HttpStatus.OK);
+        return new ResponseEntity<String>("OK", HttpStatus.OK)
     }
 
 }

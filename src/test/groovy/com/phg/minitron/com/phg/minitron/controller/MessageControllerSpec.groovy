@@ -1,7 +1,9 @@
 package com.phg.minitron.com.phg.minitron.controller
 
 import com.phg.minitron.MinitronApplication
+import com.phg.minitron.dao.MessageDao
 import com.phg.minitron.model.Message
+import groovyx.net.http.ContentType
 import groovyx.net.http.RESTClient
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.boot.test.context.SpringBootTest
@@ -23,7 +25,11 @@ class MessageControllerSpec extends Specification{
     int port //random port chosen by spring test
 
     def setup() {
+        MessageDao messageDao = new MessageDao()
+        messageDao.clean()
+
         restClient = new RESTClient("http://localhost:${port}/message/")
+        restClient.handler.failure = { resp -> resp.status }
     }
 
     def 'I can hit the message controller health endpoint'() {
@@ -38,17 +44,18 @@ class MessageControllerSpec extends Specification{
         resp.responseData.str=='OK'
     }
 
-    @Ignore
     def 'I can save a message.'() {
         given:
         restClient!=null
         Message message = new Message(device: "1", channel: "1", messageText: "Test Message.")
 
         when:
-        def resp = restClient.post(path: '/messages', body: message)
+        def resp = restClient.post(path: "/message",
+                                   body: message,
+                                   requestContentType: ContentType.JSON)
 
         then:
-        resp.status ==201
+        resp.status == 201
         resp.responseData.str=='OK'
     }
 

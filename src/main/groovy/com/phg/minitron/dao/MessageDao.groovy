@@ -71,4 +71,17 @@ public class MessageDao extends BaseDao{
         }
         result
     }
+
+    def clean() {
+        def result = false
+        try {
+            Connection conn = getConnection();
+            PreparedStatement ps = conn.prepareStatement("Delete from message");
+            ps.execute();
+            result=true
+        } catch (Exception exp) {
+            System.out.println("oops." + exp.toString());
+        }
+        result
+    }
 }

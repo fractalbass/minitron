@@ -15,6 +15,9 @@ class BaseDao {
     static Connection getConnection() throws URISyntaxException, SQLException {
         if (conn==null) {
             String dbUrl = System.getenv("JDBC_DATABASE_URL")
+            if (dbUrl==null) {
+                dbUrl="jdbc:postgresql://localhost/milesporter"
+            }
             conn = DriverManager.getConnection(dbUrl)
         }
         return conn

@@ -17,8 +17,9 @@ class MessageService {
     def createOrUpdate(Message message) {
         def result = create(message)
         if (!result) {
-            update(message)
+            result = update(message)
         }
+        result
     }
 
     def update(Message message){
