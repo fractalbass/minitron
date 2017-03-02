@@ -7,7 +7,6 @@ import groovyx.net.http.ContentType
 import groovyx.net.http.RESTClient
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.boot.test.context.SpringBootTest
-import spock.lang.Ignore
 import spock.lang.Shared
 import spock.lang.Specification
 /**
@@ -47,7 +46,7 @@ class MessageControllerSpec extends Specification{
     def 'I can save a message.'() {
         given:
         restClient!=null
-        Message message = new Message(device: "1", channel: "1", messageText: "Test Message.")
+        Message message = new Message(device: 1, channel: 1, messageText: "Test Message.")
 
         when:
         def resp = restClient.post(path: "/message",
@@ -59,9 +58,43 @@ class MessageControllerSpec extends Specification{
         resp.responseData.str=='OK'
     }
 
-    @Ignore
+    def 'I can update a message.'() {
+        given:
+        restClient!=null
+        Message message = new Message(device: 1, channel: 1, messageText: "New Test Message.")
+
+        when:
+        message.messageText = "Updated message text."
+        def resp = restClient.post(path: "/message",
+                body: message,
+                requestContentType: ContentType.JSON)
+
+        then:
+        resp.status == 201
+        resp.responseData.str=='OK'
+        and:
+        MessageDao messageDao = new MessageDao()
+        Message newMessage = new Message(device: 1, channel: 1)
+        messageDao.get(newMessage).messageText == "Updated message text."
+
+    }
+
+
+
     def 'I can get a message'() {
-        expect:
-        false
+        given:
+        restClient!=null
+        MessageDao messageDao = new MessageDao()
+
+        Message message = new Message(device: 2, channel: 3, messageText: "Saved message test.")
+        messageDao.save(message)
+
+        when:
+        def resp = restClient.get(path: "/message/2/3",
+                requestContentType: ContentType.JSON)
+
+        then:
+        resp.status == 200
+        resp.responseData.str=='Saved message test.'
     }
 }

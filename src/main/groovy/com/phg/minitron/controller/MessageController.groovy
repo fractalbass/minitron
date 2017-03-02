@@ -18,7 +18,8 @@ class MessageController {
     @RequestMapping(value = "/message/{device}/{channel}", method = RequestMethod.GET)
     public String getMessage(@PathVariable int device, @PathVariable int channel) {
         Message msg = new Message(device: device, channel: channel)
-        return messageService.get(msg)
+        Message newMessage = messageService.get(msg)
+        return newMessage.messageText
     }
 
     @RequestMapping(value = "/message", method = RequestMethod.POST)
