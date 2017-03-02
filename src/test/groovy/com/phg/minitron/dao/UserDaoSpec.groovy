@@ -41,16 +41,41 @@ class UserDaoSpec extends Specification{
         0 * _
     }
 
-    @Ignore
+
     def 'I can get a user by email and password'() {
-        expect:
-        false
+        given:
+        User user = new User(email: "some@email.com", password: "somepassword")
+        PreparedStatement preparedStatement = Mock(PreparedStatement)
+
+
+        when:
+        userDao.getUser(user)
+        then:
+        1 * connection.prepareStatement("Select userId from user where email=? and password=?") >> preparedStatement
+        1 * preparedStatement.setString(1, "some@email.com")
+        1 * preparedStatement.setString(2, "somepassword")
+        1 * preparedStatement.executeQuery()
+        0 * _
+
     }
 
-    @Ignore
+
     def 'I can update a user'() {
-        expect:
-        false
+        given:
+        User user = new User(userId: "1", email: "some@email.com", password: "somepassword")
+        PreparedStatement preparedStatement = Mock(PreparedStatement)
+
+
+        when:
+        userDao.update(user)
+        then:
+        1 * connection.prepareStatement("Update user set email=?, password=? where userId=?") >> preparedStatement
+        1 * preparedStatement.setString(3, "1")
+        1 * preparedStatement.setString(1, "some@email.com")
+        1 * preparedStatement.setString(2, "somepassword")
+        1 * preparedStatement.execute()
+        0 * _
+
     }
 
 

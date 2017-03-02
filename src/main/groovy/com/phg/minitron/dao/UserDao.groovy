@@ -33,7 +33,7 @@ class UserDao extends BaseDao{
             Connection conn = getConnection();
             PreparedStatement ps = conn.prepareStatement("Select userId from user where email=? and password=?");
             ps.setString(1,user.email);
-            ps.setInt(2,user.password);
+            ps.setString(2,user.password);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 user.setUserId(rs.getString(1));
@@ -45,6 +45,16 @@ class UserDao extends BaseDao{
     }
 
     User update(User user) {
-        null
+        try {
+            Connection conn = getConnection();
+            PreparedStatement ps = conn.prepareStatement("Update user set email=?, password=? where userId=?");
+            ps.setString(3, user.userId)
+            ps.setString(1,user.email);
+            ps.setString(2,user.password);
+            ps.execute();
+        } catch (Exception exp) {
+            System.out.println("oops." + exp.toString());
+        }
+        return user;
     }
 }
