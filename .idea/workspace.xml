@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5e70c167-c0dd-4a9a-b8e6-deef7b5b4c4c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/dao/DeviceDao.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/dao/DeviceDao.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/model/Device.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/model/Device.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/groovy/com/phg/minitron/dao/DeviceDaoSpec.groovy" afterPath="$PROJECT_DIR$/src/test/groovy/com/phg/minitron/dao/DeviceDaoSpec.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/controller/UserController.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/controller/UserController.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/dao/UserDao.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/dao/UserDao.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/service/UserService.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/service/UserService.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/groovy/com/phg/minitron/com/phg/minitron/controller/UserControllerSpec.groovy" afterPath="$PROJECT_DIR$/src/test/groovy/com/phg/minitron/com/phg/minitron/controller/UserControllerSpec.groovy" />
     </list>
     <ignored path="minitron.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,37 +42,114 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DeviceDaoSpec.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/groovy/com/phg/minitron/dao/DeviceDaoSpec.groovy">
+      <file leaf-file-name="UserService.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/service/UserService.groovy">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="40" column="33" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
-              <folding>
-                <element signature="e#30#66#0" expanded="true" />
-                <marker date="1488492766000" expanded="true" signature="847:911" placeholder="insert into device... " />
-                <marker date="1488492766000" expanded="true" signature="1588:1645" placeholder="update devic... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Device.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/model/Device.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeviceDao.groovy" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/dao/DeviceDao.groovy">
+      <file leaf-file-name="AbstractJdbc2Connection.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.postgresql/postgresql/9.4-1201-jdbc4/1accbd242e36ad0206dd0d8788f5ace0fd174f56/postgresql-9.4-1201-jdbc4-sources.jar!/org/postgresql/jdbc2/AbstractJdbc2Connection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6824324">
-              <caret line="51" column="41" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
+            <state vertical-scroll-proportion="-0.5135135">
+              <caret line="292" column="0" selection-start-line="292" selection-start-column="0" selection-end-line="292" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseDao.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/dao/BaseDao.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Message.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/model/Message.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageControllerSpec.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/groovy/com/phg/minitron/com/phg/minitron/controller/MessageControllerSpec.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="53" column="35" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="72" />
               <folding>
-                <element signature="e#30#66#0" expanded="true" />
+                <element signature="e#54#97#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserControllerSpec.groovy" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/groovy/com/phg/minitron/com/phg/minitron/controller/UserControllerSpec.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.392936">
+              <caret line="44" column="16" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
+              <folding>
+                <element signature="e#54#97#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/controller/UserController.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding>
+                <element signature="e#37#71#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/model/User.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDao.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/dao/UserDao.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+              <folding>
+                <element signature="e#30#64#0" expanded="true" />
+                <marker date="1488548277000" expanded="true" signature="1039:1091" placeholder="Select userI... user" />
+                <marker date="1488548277000" expanded="true" signature="1597:1647" placeholder="Update user " />
+                <marker date="1488548277000" expanded="true" signature="2103:2119" placeholder="delete from " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageController.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/controller/MessageController.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="73" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="73" />
+              <folding>
+                <element signature="e#37#74#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -571,12 +649,9 @@
         <option value="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/model/User.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/service/DeviceService.groovy" />
         <option value="$PROJECT_DIR$/src/test/groovy/com/phg/minitron/service/DeviceServiceSpec.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/service/UserService.groovy" />
         <option value="$PROJECT_DIR$/src/test/groovy/com/phg/minitron/service/UserServiceSpec.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/dao/UserDao.groovy" />
         <option value="$PROJECT_DIR$/src/test/groovy/com/phg/minitron/dao/UserDaoSpec.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/controller/DeviceController.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/controller/UserController.groovy" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/dao/BaseDao.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/dao/MessageDao.groovy" />
@@ -586,6 +661,10 @@
         <option value="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/model/Device.groovy" />
         <option value="$PROJECT_DIR$/src/test/groovy/com/phg/minitron/dao/DeviceDaoSpec.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/dao/DeviceDao.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/service/UserService.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/controller/UserController.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/com/phg/minitron/dao/UserDao.groovy" />
+        <option value="$PROJECT_DIR$/src/test/groovy/com/phg/minitron/com/phg/minitron/controller/UserControllerSpec.groovy" />
       </list>
     </option>
   </component>
@@ -905,85 +984,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
   </component>
-  <component name="RunManager" selected="JUnit.DeviceDaoSpec.I should be able to update a device">
-    <configuration default="false" name="MessageControllerSpec" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.phg.minitron.com.phg.minitron.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="minitron" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.phg.minitron.com.phg.minitron.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.phg.minitron.com.phg.minitron.controller.MessageControllerSpec" />
-      <option name="METHOD_NAME" value="I can save a message." />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="MessageControllerSpec.I can get a message" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.phg.minitron.com.phg.minitron.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="minitron" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.phg.minitron.com.phg.minitron.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.phg.minitron.com.phg.minitron.controller.MessageControllerSpec" />
-      <option name="METHOD_NAME" value="I can get a message" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="MessageControllerSpec.I can update a message." type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.phg.minitron.com.phg.minitron.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="minitron" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.phg.minitron.com.phg.minitron.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.phg.minitron.com.phg.minitron.controller.MessageControllerSpec" />
-      <option name="METHOD_NAME" value="I can update a message." />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.UserControllerSpec.I can save a user.">
     <configuration default="false" name="DeviceDaoSpec.I should be able to save a device" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1024,6 +1025,84 @@
       <option name="MAIN_CLASS_NAME" value="com.phg.minitron.dao.DeviceDaoSpec" />
       <option name="METHOD_NAME" value="I should be able to update a device" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="UserControllerSpec.I can hit the device controller health endpoint" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.phg.minitron.com.phg.minitron.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="minitron" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.phg.minitron.com.phg.minitron.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.phg.minitron.com.phg.minitron.controller.UserControllerSpec" />
+      <option name="METHOD_NAME" value="I can hit the device controller health endpoint" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="UserControllerSpec.I can save a user." type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.phg.minitron.com.phg.minitron.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="minitron" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.phg.minitron.com.phg.minitron.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.phg.minitron.com.phg.minitron.controller.UserControllerSpec" />
+      <option name="METHOD_NAME" value="I can save a user." />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="UserControllerSpec" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.phg.minitron.com.phg.minitron.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="minitron" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.phg.minitron.com.phg.minitron.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.phg.minitron.com.phg.minitron.controller.UserControllerSpec" />
+      <option name="METHOD_NAME" value="I can save a user." />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -1459,19 +1538,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.MessageControllerSpec" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.MessageControllerSpec.I can get a message" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.MessageControllerSpec.I can update a message." />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.DeviceDaoSpec.I should be able to save a device" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.DeviceDaoSpec.I should be able to update a device" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.DeviceDaoSpec.I should be able to save a device" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.DeviceDaoSpec.I should be able to update a device" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.UserControllerSpec.I can hit the device controller health endpoint" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.UserControllerSpec.I can save a user." />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.UserControllerSpec" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.DeviceDaoSpec.I should be able to update a device" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.DeviceDaoSpec.I should be able to save a device" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.MessageControllerSpec" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.MessageControllerSpec.I can update a message." />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.MessageControllerSpec.I can get a message" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.UserControllerSpec.I can save a user." />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.UserControllerSpec" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.UserControllerSpec.I can hit the device controller health endpoint" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.DeviceDaoSpec.I should be able to update a device" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.DeviceDaoSpec.I should be able to save a device" />
       </list>
     </recent_temporary>
   </component>
@@ -1486,44 +1565,44 @@
       <option name="number" value="Default" />
       <updated>1488143969949</updated>
       <workItem from="1488143975042" duration="7301000" />
-      <workItem from="1488460034094" duration="13273000" />
+      <workItem from="1488460034094" duration="15465000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DeviceDaoSpec_I_should_be_able_to_save_a_device - 2017.03.02 at 16h 03m 00s.xml">
-      <configuration name="DeviceDaoSpec.I should be able to save a device" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeviceDaoSpec_I_should_be_able_to_save_a_device - 2017.03.02 at 16h 03m 22s.xml">
-      <configuration name="DeviceDaoSpec.I should be able to save a device" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeviceDaoSpec_I_should_be_able_to_save_a_device - 2017.03.02 at 16h 04m 19s.xml">
-      <configuration name="DeviceDaoSpec.I should be able to save a device" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeviceDaoSpec_I_should_be_able_to_save_a_device - 2017.03.02 at 16h 08m 03s.xml">
-      <configuration name="DeviceDaoSpec.I should be able to save a device" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeviceDaoSpec_I_should_be_able_to_save_a_device - 2017.03.02 at 16h 09m 03s.xml">
-      <configuration name="DeviceDaoSpec.I should be able to save a device" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeviceDaoSpec_I_should_be_able_to_save_a_device - 2017.03.02 at 16h 09m 38s.xml">
-      <configuration name="DeviceDaoSpec.I should be able to save a device" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeviceDaoSpec_I_should_be_able_to_save_a_device - 2017.03.02 at 16h 11m 24s.xml">
-      <configuration name="DeviceDaoSpec.I should be able to save a device" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeviceDaoSpec_I_should_be_able_to_save_a_device - 2017.03.02 at 16h 11m 35s.xml">
-      <configuration name="DeviceDaoSpec.I should be able to save a device" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DeviceDaoSpec_I_should_be_able_to_update_a_device - 2017.03.02 at 16h 12m 48s.xml">
       <configuration name="DeviceDaoSpec.I should be able to update a device" configurationId="JUnit" />
     </history-entry>
     <history-entry file="DeviceDaoSpec_I_should_be_able_to_update_a_device - 2017.03.02 at 16h 14m 05s.xml">
       <configuration name="DeviceDaoSpec.I should be able to update a device" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="DeviceDaoSpec_I_should_be_able_to_update_a_device - 2017.03.02 at 16h 15m 03s.xml">
+      <configuration name="DeviceDaoSpec.I should be able to update a device" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserControllerSpec - 2017.03.03 at 07h 43m 08s.xml">
+      <configuration name="UserControllerSpec" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserControllerSpec_I_can_hit_the_device_controller_health_endpoint - 2017.03.03 at 07h 31m 44s.xml">
+      <configuration name="UserControllerSpec.I can hit the device controller health endpoint" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserControllerSpec_I_can_hit_the_device_controller_health_endpoint - 2017.03.03 at 07h 38m 17s.xml">
+      <configuration name="UserControllerSpec.I can hit the device controller health endpoint" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserControllerSpec_I_can_hit_the_device_controller_health_endpoint - 2017.03.03 at 07h 39m 41s.xml">
+      <configuration name="UserControllerSpec.I can hit the device controller health endpoint" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserControllerSpec_I_can_save_a_user_ - 2017.03.03 at 07h 40m 48s.xml">
+      <configuration name="UserControllerSpec.I can save a user." configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserControllerSpec_I_can_save_a_user_ - 2017.03.03 at 07h 41m 57s.xml">
+      <configuration name="UserControllerSpec.I can save a user." configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserControllerSpec_I_can_save_a_user_ - 2017.03.03 at 07h 46m 57s.xml">
+      <configuration name="UserControllerSpec.I can save a user." configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20574000" />
+    <option name="totallyTimeSpent" value="22766000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="807" extended-state="6" />
@@ -1537,8 +1616,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33986014" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21958043" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33986014" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22097902" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23962805" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1549,7 +1628,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22097902" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3272727" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1655,8 +1734,14 @@
           <properties />
           <option name="timeStamp" value="24" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/controller/UserController.groovy</url>
+          <line>30</line>
+          <properties />
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="25" />
+      <option name="time" value="26" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1725,24 +1810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/model/User.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2998565">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/service/UserService.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-          <folding>
-            <element signature="e#34#69#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/service/DeviceService.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1753,54 +1820,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/groovy/com/phg/minitron/service/UserServiceSpec.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="72" column="29" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
-          <folding>
-            <element signature="e#34#69#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/groovy/com/phg/minitron/service/MessageServiceSpec.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/groovy/com/phg/minitron/service/DeviceServiceSpec.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="99" column="78" selection-start-line="99" selection-start-column="78" selection-end-line="99" selection-end-column="78" />
-          <folding>
-            <element signature="e#34#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/controller/UserController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/groovy/com/phg/minitron/com/phg/minitron/controller/DeviceControllerSpec.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/groovy/com/phg/minitron/com/phg/minitron/controller/UserControllerSpec.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -1837,67 +1860,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.postgresql/postgresql/9.4-1201-jdbc4/1accbd242e36ad0206dd0d8788f5ace0fd174f56/postgresql-9.4-1201-jdbc4-sources.jar!/org/postgresql/jdbc2/AbstractJdbc2Connection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.027027">
-          <caret line="292" column="0" selection-start-line="292" selection-start-column="0" selection-end-line="292" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/dao/BaseDao.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/service/MessageService.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/groovy/com/phg/minitron/com/phg/minitron/controller/MessageControllerSpec.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#54#97#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/controller/DeviceController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/controller/MessageController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#37#74#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/dao/UserDao.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
-          <folding>
-            <element signature="e#30#64#0" expanded="true" />
-            <marker date="1488460850000" expanded="true" signature="1039:1091" placeholder="Select userI... user" />
-            <marker date="1488460850000" expanded="true" signature="1597:1647" placeholder="Update user " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1910,14 +1877,6 @@
             <marker date="1488487258000" expanded="true" signature="2216:2264" placeholder="Delete from " />
             <marker date="1488487258000" expanded="true" signature="2699:2718" placeholder="Delete from " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/model/Message.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1969,10 +1928,137 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/dao/DeviceDao.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6824324">
+        <state vertical-scroll-proportion="0.0">
           <caret line="51" column="41" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
           <folding>
             <element signature="e#30#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/controller/DeviceController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/groovy/com/phg/minitron/service/DeviceServiceSpec.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="99" column="78" selection-start-line="99" selection-start-column="78" selection-end-line="99" selection-end-column="78" />
+          <folding>
+            <element signature="e#34#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/groovy/com/phg/minitron/service/UserServiceSpec.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="72" column="29" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/groovy/com/phg/minitron/com/phg/minitron/controller/DeviceControllerSpec.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/model/Message.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/model/User.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/controller/MessageController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="73" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="73" />
+          <folding>
+            <element signature="e#37#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/groovy/com/phg/minitron/com/phg/minitron/controller/MessageControllerSpec.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="35" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="72" />
+          <folding>
+            <element signature="e#54#97#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/service/UserService.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.postgresql/postgresql/9.4-1201-jdbc4/1accbd242e36ad0206dd0d8788f5ace0fd174f56/postgresql-9.4-1201-jdbc4-sources.jar!/org/postgresql/jdbc2/AbstractJdbc2Connection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.5135135">
+          <caret line="292" column="0" selection-start-line="292" selection-start-column="0" selection-end-line="292" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/dao/BaseDao.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/dao/UserDao.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <folding>
+            <element signature="e#30#64#0" expanded="true" />
+            <marker date="1488548277000" expanded="true" signature="1039:1091" placeholder="Select userI... user" />
+            <marker date="1488548277000" expanded="true" signature="1597:1647" placeholder="Update user " />
+            <marker date="1488548277000" expanded="true" signature="2103:2119" placeholder="delete from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/phg/minitron/controller/UserController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="e#37#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/groovy/com/phg/minitron/com/phg/minitron/controller/UserControllerSpec.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.392936">
+          <caret line="44" column="16" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
+          <folding>
+            <element signature="e#54#97#0" expanded="true" />
           </folding>
         </state>
       </provider>

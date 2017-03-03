@@ -30,7 +30,9 @@ class UserService {
     }
 
     def authenticateUser(User user) {
-        return userDao.getUser(user)
+        User authUser = userDao.getUser(user)
+        authUser != null
+
     }
 
     def resetPassword(User user, String newPassword) {

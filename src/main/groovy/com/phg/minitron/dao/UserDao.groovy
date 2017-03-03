@@ -57,4 +57,17 @@ class UserDao extends BaseDao{
         }
         return user;
     }
+
+    boolean clean() {
+        boolean result = false
+        try {
+            Connection conn = getConnection();
+            PreparedStatement ps = conn.prepareStatement("delete from user");
+            ps.execute();
+            result = true
+        } catch (Exception exp) {
+            System.out.println("oops." + exp.toString());
+        }
+        return result
+    }
 }
