@@ -1,13 +1,10 @@
 package com.phg.minitron.dao
 
-import com.phg.minitron.model.Message
 import com.phg.minitron.model.User
-import spock.lang.Ignore
 import spock.lang.Specification
 
 import java.sql.Connection
 import java.sql.PreparedStatement
-
 /**
  * Created by milesporter on 2/26/17.
  */
@@ -20,7 +17,6 @@ class UserDaoSpec extends Specification{
         userDao = new UserDao()
         connection = Mock(Connection)
         userDao.conn = connection
-
     }
 
     def 'I can save a user'() {

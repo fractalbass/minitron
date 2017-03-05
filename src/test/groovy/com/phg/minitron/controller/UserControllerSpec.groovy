@@ -2,6 +2,7 @@ package com.phg.minitron.controller
 
 import com.phg.minitron.MinitronApplication
 import com.phg.minitron.dao.UserDao
+import com.phg.minitron.integration.DatabaseUtil
 import groovyx.net.http.ContentType
 import groovyx.net.http.RESTClient
 import org.springframework.beans.factory.annotation.Value
@@ -22,6 +23,11 @@ class UserControllerSpec extends Specification {
 
     @Value('${local.server.port}')
     int port //random port chosen by spring test
+
+    def setupSpec() {
+        DatabaseUtil dbUtil = new DatabaseUtil()
+        dbUtil.createDatabase()
+    }
 
     def setup() {
         UserDao userDao = new UserDao()
