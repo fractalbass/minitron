@@ -1,0 +1,12 @@
+version: '3'
+services:
+# ------------------------------------------
+  postgres:
+    image: asimio/postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      - DEBUG=false
+      - DB_USER=postgres
+      - DB_PASS=secret
+      - DB_NAME=minitron

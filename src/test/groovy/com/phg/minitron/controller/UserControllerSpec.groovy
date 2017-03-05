@@ -1,4 +1,4 @@
-package com.phg.minitron.com.phg.minitron.controller
+package com.phg.minitron.controller
 
 import com.phg.minitron.MinitronApplication
 import com.phg.minitron.dao.UserDao
@@ -12,6 +12,7 @@ import spock.lang.Specification
 /**
  * Created by milesporter on 3/2/17.
  */
+//@DockerDependent
 @SpringBootTest(classes = MinitronApplication.class,
         webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class UserControllerSpec extends Specification {

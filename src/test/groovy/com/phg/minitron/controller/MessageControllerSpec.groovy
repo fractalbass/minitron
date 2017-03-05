@@ -1,4 +1,4 @@
-package com.phg.minitron.com.phg.minitron.controller
+package com.phg.minitron.controller
 
 import com.phg.minitron.MinitronApplication
 import com.phg.minitron.dao.MessageDao

@@ -2,12 +2,12 @@ package com.phg.minitron.service
 
 import com.phg.minitron.dao.UserDao
 import com.phg.minitron.model.User
-import spock.lang.Ignore
 import spock.lang.Specification
-
 /**
  * Created by milesporter on 2/26/17.
  */
+
+
 class UserServiceSpec extends Specification{
 
     def UserService userService = new UserService()
