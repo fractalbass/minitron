@@ -31,7 +31,7 @@ class UserController {
         def result = new ResponseEntity<User>(null, HttpStatus.INTERNAL_SERVER_ERROR)
         User user = new User(email: email, password: password)
         user = userService.registerUser(user)
-        if (userService.registerUser(user)) {
+        if (user) {
             result = new  ResponseEntity<User>(user, HttpStatus.CREATED)
         }
         result

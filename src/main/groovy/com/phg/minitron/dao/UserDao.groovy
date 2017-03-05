@@ -16,7 +16,7 @@ class UserDao extends BaseDao{
     boolean save(User user) {
         boolean result = false;
         try {
-            PreparedStatement preparedStatement = getPreparedStatement("insert into user (userId, email, password) values (?,?,?)")
+            PreparedStatement preparedStatement = getPreparedStatement("insert into mtuser (userId, email, password) values (?,?,?)")
             preparedStatement.setString(1, user.getUserId().toString())
             preparedStatement.setString(2, user.getEmail())
             preparedStatement.setString(3, user.getPassword())
@@ -31,7 +31,7 @@ class UserDao extends BaseDao{
     User getUser(User user) {
         try {
             Connection conn = getConnection();
-            PreparedStatement ps = conn.prepareStatement("Select userId from user where email=? and password=?");
+            PreparedStatement ps = conn.prepareStatement("Select userId from mtuser where email=? and password=?");
             ps.setString(1,user.email);
             ps.setString(2,user.password);
             ResultSet rs = ps.executeQuery();
@@ -47,7 +47,7 @@ class UserDao extends BaseDao{
     User update(User user) {
         try {
             Connection conn = getConnection();
-            PreparedStatement ps = conn.prepareStatement("Update user set email=?, password=? where userId=?");
+            PreparedStatement ps = conn.prepareStatement("Update mtuser set email=?, password=? where userId=?");
             ps.setString(3, user.userId)
             ps.setString(1,user.email);
             ps.setString(2,user.password);
@@ -62,7 +62,7 @@ class UserDao extends BaseDao{
         boolean result = false
         try {
             Connection conn = getConnection();
-            PreparedStatement ps = conn.prepareStatement("delete from user");
+            PreparedStatement ps = conn.prepareStatement("delete from mtuser");
             ps.execute();
             result = true
         } catch (Exception exp) {
