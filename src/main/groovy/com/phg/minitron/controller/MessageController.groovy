@@ -17,17 +17,17 @@ class MessageController {
 
     @RequestMapping(value = "/message/{device}/{channel}", method = RequestMethod.GET)
     public String getMessage(@PathVariable int device, @PathVariable int channel) {
-        Message msg = new Message(device: device, channel: channel)
-        Message newMessage = messageService.get(msg)
+        Message msg = new Message(deviceId: device, channel: channel)
+        Message newMessage = messageService.getByDeviceAndChannel(msg)
         return newMessage.messageText
     }
 
     @RequestMapping(value = "/message", method = RequestMethod.POST)
     public ResponseEntity<String> getMessage(@RequestBody Message message) {
-        boolean result = messageService.createOrUpdate(new Message(device: message.device, channel: message.channel, messageText: message.messageText))
+        Message result = messageService.createOrUpdate(new Message(deviceId: message.deviceId, channel: message.channel, messageText: message.messageText))
         def ResponseEntity<String> resp
         if (result) {
-            resp = new ResponseEntity<String>("OK", HttpStatus.CREATED)
+            resp = new ResponseEntity<String>(result.messageId, HttpStatus.CREATED)
         } else {
             resp = new ResponseEntity<String>("FAILED", HttpStatus.INTERNAL_SERVER_ERROR)
 

@@ -29,7 +29,7 @@ class UserDaoSpec extends Specification{
         userDao.save(user)
 
         then:
-        1 * connection.prepareStatement("insert into user (userId, email, password) values (?,?,?)") >> preparedStatement
+        1 * connection.prepareStatement("insert into mtuser (userId, email, password) values (?,?,?)") >> preparedStatement
         1 * preparedStatement.setString(1,userId.toString())
         1 * preparedStatement.setString(2,"some@email.com")
         1 * preparedStatement.setString(3, "password")
@@ -47,7 +47,7 @@ class UserDaoSpec extends Specification{
         when:
         userDao.getUser(user)
         then:
-        1 * connection.prepareStatement("Select userId from user where email=? and password=?") >> preparedStatement
+        1 * connection.prepareStatement("Select userId from mtuser where email=? and password=?") >> preparedStatement
         1 * preparedStatement.setString(1, "some@email.com")
         1 * preparedStatement.setString(2, "somepassword")
         1 * preparedStatement.executeQuery()
@@ -65,7 +65,7 @@ class UserDaoSpec extends Specification{
         when:
         userDao.update(user)
         then:
-        1 * connection.prepareStatement("Update user set email=?, password=? where userId=?") >> preparedStatement
+        1 * connection.prepareStatement("Update mtuser set email=?, password=? where userId=?") >> preparedStatement
         1 * preparedStatement.setString(3, "1")
         1 * preparedStatement.setString(1, "some@email.com")
         1 * preparedStatement.setString(2, "somepassword")

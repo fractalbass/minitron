@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.phg.minitron.service.MessageServiceSpec" tests="7" skipped="0" failures="0" errors="0" timestamp="2017-03-02T19:55:52" hostname="Miles-2015-Mac-Book-Pro.local" time="0.009">
+<testsuite name="com.phg.minitron.service.MessageServiceSpec" tests="7" skipped="0" failures="0" errors="0" timestamp="2017-03-05T21:14:58" hostname="Miles-2015-Mac-Book-Pro.local" time="0.008">
   <properties/>
   <testcase name="I should be able to run a test" classname="com.phg.minitron.service.MessageServiceSpec" time="0.004"/>
-  <testcase name="I should be able to create a message" classname="com.phg.minitron.service.MessageServiceSpec" time="0.001"/>
+  <testcase name="I should be able to create a message" classname="com.phg.minitron.service.MessageServiceSpec" time="0.0"/>
   <testcase name="I should be able to update a message" classname="com.phg.minitron.service.MessageServiceSpec" time="0.001"/>
-  <testcase name="I should be able to create or update a message when the message does not exist" classname="com.phg.minitron.service.MessageServiceSpec" time="0.001"/>
-  <testcase name="I should be able to create or update a message that does exist" classname="com.phg.minitron.service.MessageServiceSpec" time="0.0"/>
-  <testcase name="I should be able to get a message" classname="com.phg.minitron.service.MessageServiceSpec" time="0.001"/>
-  <testcase name="I should be able to delete a message" classname="com.phg.minitron.service.MessageServiceSpec" time="0.0"/>
+  <testcase name="I should be able to create or update a message when the message does not exist" classname="com.phg.minitron.service.MessageServiceSpec" time="0.0"/>
+  <testcase name="I should be able to create or update a message that does exist" classname="com.phg.minitron.service.MessageServiceSpec" time="0.001"/>
+  <testcase name="I should be able to get a message" classname="com.phg.minitron.service.MessageServiceSpec" time="0.0"/>
+  <testcase name="I should be able to delete a message" classname="com.phg.minitron.service.MessageServiceSpec" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

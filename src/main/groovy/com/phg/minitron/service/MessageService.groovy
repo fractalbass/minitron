@@ -27,14 +27,18 @@ class MessageService {
     }
 
     def create(Message message){
+        String messageId = UUID.randomUUID().toString()
+        message.setMessageId(messageId)
         messageDao.save(message)
+        message
     }
 
-    def get(Message message) {
-        messageDao.get(message)
+    def getByDeviceAndChannel(Message message) {
+        messageDao.getByDeviceAndChannel(message)
     }
 
     def delete(Message message) {
         messageDao.delete(message)
     }
 }
+

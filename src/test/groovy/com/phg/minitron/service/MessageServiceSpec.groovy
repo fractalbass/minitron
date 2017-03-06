@@ -25,7 +25,7 @@ class MessageServiceSpec extends Specification{
 
     def 'I should be able to create a message'() {
         given:
-        Message message = new Message(device: 1, channel: 1, messageText: "Blahblahblah")
+        Message message = new Message(deviceId: '1', channel: 1, messageText: "Blahblahblah")
         when:
         messageService.create(message)
 
@@ -35,7 +35,7 @@ class MessageServiceSpec extends Specification{
 
     def 'I should be able to update a message'() {
         given:
-        Message message = new Message(device: 1, channel: 1, messageText: "Blahblahblah")
+        Message message = new Message(deviceId: 1, channel: 1, messageText: "Blahblahblah")
         when:
         messageService.update(message)
 
@@ -45,7 +45,7 @@ class MessageServiceSpec extends Specification{
 
     def 'I should be able to create or update a message when the message does not exist'() {
         given:
-        Message message = new Message(device: 1, channel: 1, messageText: "Blahblahblah")
+        Message message = new Message(deviceId: 1, channel: 1, messageText: "Blahblahblah")
         when:
         messageService.createOrUpdate(message)
 
@@ -54,34 +54,46 @@ class MessageServiceSpec extends Specification{
         0 * _
     }
 
-    def 'I should be able to create or update a message that does exist'() {
+    def 'I should be able to create a new message.'() {
         given:
-        Message message = new Message(device: 1, channel: 1, messageText: "Blahblahblah")
+        Message message = new Message(deviceId: 1, channel: 1, messageText: "Blahblahblah")
         when:
-        messageService.createOrUpdate(message)
+        def newMessage = messageService.create(message)
 
         then:
-        1 * messageDao.save(message) >> false
-        1 * messageDao.update(message)
+        newMessage.getMessageId()!=null
+        1 * messageDao.save(message) >> true
+        0 * _
+    }
+
+    def 'I should be able to update a new message.'() {
+        given:
+        String messageId = UUID.randomUUID().toString()
+        Message message = new Message(messageId: messageId, deviceId: 1, channel: 1, messageText: "Blahblahblah")
+        when:
+        def newMessage = messageService.update(message)
+
+        then:
+        1 * messageDao.save(message) >> true
         0 * _
     }
 
 
     def 'I should be able to get a message'() {
         given:
-        Message message = new Message(device: 1, channel: 1, messageText: "Blahblahblah")
-        Message lookup = new Message(device: 1, channel: 1)
+        Message message = new Message(deviceId: 1, channel: 1, messageText: "Blahblahblah")
+        Message lookup = new Message(deviceId: 1, channel: 1)
         when:
-        Message message1 = messageService.get(lookup)
+        Message message1 = messageService.getByDeviceAndChannel(lookup)
 
         then:
-        1 * messageDao.get(lookup) >> message
+        1 * messageDao.getByDeviceAndChannel(lookup) >> message
         message1.equals(message)
     }
 
     def 'I should be able to delete a message'() {
         given:
-        Message lookup = new Message(device: 1, channel: 1)
+        Message lookup = new Message(deviceId: 1, channel: 1)
 
         when:
         boolean result = messageService.delete(lookup)

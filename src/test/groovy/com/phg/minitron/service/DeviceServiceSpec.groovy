@@ -2,9 +2,7 @@ package com.phg.minitron.service
 
 import com.phg.minitron.dao.DeviceDao
 import com.phg.minitron.model.Device
-import spock.lang.Ignore
 import spock.lang.Specification
-
 /**
  * Created by milesporter on 2/26/17.
  */
@@ -45,8 +43,8 @@ class DeviceServiceSpec extends Specification{
         def result = deviceService.associateDeviceToUser(device, userId)
 
         then:
-        result.userId==userId
-        result.deviceId==deviceId
+        result.userId==userId.toString()
+        result.deviceId==deviceId.toString()
         result.deviceCode=="code"
         1 * deviceDao.update(_) >> true
         0 * _
@@ -64,7 +62,7 @@ class DeviceServiceSpec extends Specification{
 
         then:
         result.userId==null
-        result.deviceId==deviceId
+        result.deviceId==deviceId.toString()
         result.deviceCode=="code"
         1 * deviceDao.update(_) >> true
         0 * _
