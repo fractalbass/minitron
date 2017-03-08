@@ -2,6 +2,7 @@ package com.phg.minitron.controller
 
 import com.phg.minitron.MinitronApplication
 import com.phg.minitron.dao.MessageDao
+import com.phg.minitron.integration.DatabaseUtil
 import com.phg.minitron.integration.DockerDependent
 import com.phg.minitron.model.Message
 import groovyx.net.http.ContentType
@@ -24,9 +25,12 @@ class MessageControllerSpec extends Specification{
     @Value('${local.server.port}')
     int port //random port chosen by spring test
 
+    def setupSpec() {
+        DatabaseUtil dbUtil = new DatabaseUtil()
+        dbUtil.createDatabase()
+    }
+
     def setup() {
-        MessageDao messageDao = new MessageDao()
-        messageDao.clean()
 
         restClient = new RESTClient("http://localhost:${port}/message/")
         restClient.handler.failure = { resp -> resp.status }
@@ -63,20 +67,23 @@ class MessageControllerSpec extends Specification{
         given:
         restClient!=null
         Message message = new Message(deviceId: '2', channel: 1, messageText: "New Test Message.")
+        restClient.post(path: "/message",
+                body: message,
+                requestContentType: ContentType.JSON)
 
         when:
         message.messageText = "Updated message text."
-        def resp = restClient.post(path: "/message",
+        def resp = restClient.put(path: "/message",
                 body: message,
                 requestContentType: ContentType.JSON)
 
         then:
         resp.status == 201
-        resp.responseData.str!=null
         and:
         MessageDao messageDao = new MessageDao()
         Message newMessage = new Message(deviceId: '2', channel: 1)
-        messageDao.get(newMessage).messageText == "Updated message text."
+        def updatedMessage = messageDao.getByDeviceAndChannel(newMessage)
+        updatedMessage.messageText == "Updated message text."
 
     }
 
@@ -86,9 +93,11 @@ class MessageControllerSpec extends Specification{
         given:
         restClient!=null
         MessageDao messageDao = new MessageDao()
-
         Message message = new Message(deviceId: '2', channel: 3, messageText: "Saved message test.")
-        messageDao.save(message)
+        restClient.post(path: "/message",
+                body: message,
+                requestContentType: ContentType.JSON)
+
 
         when:
         def resp = restClient.get(path: "/message/2/3",

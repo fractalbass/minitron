@@ -28,7 +28,7 @@ public class MessageDao extends BaseDao{
     }
 
     def update(Message message) {
-        boolean result = false;
+        def result = null;
         try {
             PreparedStatement preparedStatement = getPreparedStatement("update message set message=?, channel=?, deviceId=? where messageId=?")
             preparedStatement.setString(1, message.getMessageText())
@@ -36,7 +36,7 @@ public class MessageDao extends BaseDao{
             preparedStatement.setString(3, message.getDeviceId())
             preparedStatement.setString(4, message.getMessageId())
             preparedStatement.execute()
-            result=true
+            result=message
         } catch (Exception exp) {
             System.out.println("Error: " + exp.toString())
         }

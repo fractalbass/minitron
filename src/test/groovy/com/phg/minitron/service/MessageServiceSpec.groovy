@@ -74,7 +74,7 @@ class MessageServiceSpec extends Specification{
         def newMessage = messageService.update(message)
 
         then:
-        1 * messageDao.save(message) >> true
+        1 * messageDao.update(message) >> true
         0 * _
     }
 

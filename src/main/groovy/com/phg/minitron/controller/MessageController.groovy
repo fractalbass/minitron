@@ -23,8 +23,21 @@ class MessageController {
     }
 
     @RequestMapping(value = "/message", method = RequestMethod.POST)
-    public ResponseEntity<String> getMessage(@RequestBody Message message) {
-        Message result = messageService.createOrUpdate(new Message(deviceId: message.deviceId, channel: message.channel, messageText: message.messageText))
+    public ResponseEntity<String> createMessage(@RequestBody Message message) {
+        Message result = messageService.create(new Message(deviceId: message.deviceId, channel: message.channel, messageText: message.messageText))
+        def ResponseEntity<String> resp
+        if (result) {
+            resp = new ResponseEntity<String>(result, HttpStatus.CREATED)
+        } else {
+            resp = new ResponseEntity<String>("FAILED", HttpStatus.INTERNAL_SERVER_ERROR)
+
+        }
+        return resp
+    }
+
+    @RequestMapping(value = "/message", method = RequestMethod.PUT)
+    public ResponseEntity<String> updateMessage(@RequestBody Message message) {
+        Message result = messageService.update(new Message(messageId: message.messageId, deviceId: message.deviceId, channel: message.channel, messageText: message.messageText))
         def ResponseEntity<String> resp
         if (result) {
             resp = new ResponseEntity<String>(result.messageId, HttpStatus.CREATED)
