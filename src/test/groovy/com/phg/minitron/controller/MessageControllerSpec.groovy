@@ -60,16 +60,22 @@ class MessageControllerSpec extends Specification{
 
         then:
         resp.status == 201
-        resp.responseData.str != null
+        resp.responseData.deviceId == '2'
+        resp.responseData.channel == 1
+        resp.responseData.messageText=="Test Message."
+        resp.responseData.messageId!=null
     }
 
     def 'I can update a message.'() {
         given:
         restClient!=null
         Message message = new Message(deviceId: '2', channel: 1, messageText: "New Test Message.")
-        restClient.post(path: "/message",
+        def respOriginal = restClient.post(path: "/message",
                 body: message,
                 requestContentType: ContentType.JSON)
+
+        //  Need the messageId coming back from the commit.
+        message = respOriginal.responseData
 
         when:
         message.messageText = "Updated message text."
