@@ -22,7 +22,9 @@ class UserDaoSpec extends Specification{
     def 'I can save a user'() {
         given:
         UUID userId = UUID.randomUUID()
-        User user = new User(userId: userId, email: "some@email.com", password: "password")
+        User user = new User(userId: userId, email: "some@email.com");
+        user.setPassword("password")
+        def hash = user.getPasswordHash()
         PreparedStatement preparedStatement = Mock(PreparedStatement)
 
         when:
@@ -32,7 +34,7 @@ class UserDaoSpec extends Specification{
         1 * connection.prepareStatement("insert into mtuser (userId, email, password) values (?,?,?)") >> preparedStatement
         1 * preparedStatement.setString(1,userId.toString())
         1 * preparedStatement.setString(2,"some@email.com")
-        1 * preparedStatement.setString(3, "password")
+        1 * preparedStatement.setString(3,hash)
         1 * preparedStatement.execute()
         0 * _
     }
@@ -40,7 +42,8 @@ class UserDaoSpec extends Specification{
 
     def 'I can get a user by email and password'() {
         given:
-        User user = new User(email: "some@email.com", password: "somepassword")
+        User user = new User(email: "some@email.com")
+        user.setPassword("somePassword")
         PreparedStatement preparedStatement = Mock(PreparedStatement)
 
 
@@ -49,7 +52,7 @@ class UserDaoSpec extends Specification{
         then:
         1 * connection.prepareStatement("Select userId from mtuser where email=? and password=?") >> preparedStatement
         1 * preparedStatement.setString(1, "some@email.com")
-        1 * preparedStatement.setString(2, "somepassword")
+        1 * preparedStatement.setString(2, user.getPasswordHash())
         1 * preparedStatement.executeQuery()
         0 * _
 
@@ -58,7 +61,8 @@ class UserDaoSpec extends Specification{
 
     def 'I can update a user'() {
         given:
-        User user = new User(userId: "1", email: "some@email.com", password: "somepassword")
+        User user = new User(userId: "1", email: "some@email.com")
+        user.setPassword("someOtherPassword")
         PreparedStatement preparedStatement = Mock(PreparedStatement)
 
 
@@ -68,7 +72,7 @@ class UserDaoSpec extends Specification{
         1 * connection.prepareStatement("Update mtuser set email=?, password=? where userId=?") >> preparedStatement
         1 * preparedStatement.setString(3, "1")
         1 * preparedStatement.setString(1, "some@email.com")
-        1 * preparedStatement.setString(2, "somepassword")
+        1 * preparedStatement.setString(2, user.getPasswordHash())
         1 * preparedStatement.execute()
         0 * _
 

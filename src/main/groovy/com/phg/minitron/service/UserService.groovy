@@ -4,7 +4,6 @@ import com.phg.minitron.dao.UserDao
 import com.phg.minitron.model.User
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
-
 /**
  * Created by milesporter on 2/26/17.
  */
@@ -37,9 +36,10 @@ class UserService {
 
     def resetPassword(User user, String newPassword) {
         User u = userDao.getUser(user)
-        u.password = newPassword
+        u.setPassword(newPassword)
         userDao.update(u)
         u
     }
+
 
 }

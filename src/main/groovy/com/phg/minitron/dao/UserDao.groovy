@@ -19,7 +19,7 @@ class UserDao extends BaseDao{
             PreparedStatement preparedStatement = getPreparedStatement("insert into mtuser (userId, email, password) values (?,?,?)")
             preparedStatement.setString(1, user.getUserId().toString())
             preparedStatement.setString(2, user.getEmail())
-            preparedStatement.setString(3, user.getPassword())
+            preparedStatement.setString(3, user.getPasswordHash())
             preparedStatement.execute()
             result=true
         } catch (Exception exp) {
@@ -33,7 +33,7 @@ class UserDao extends BaseDao{
             Connection conn = getConnection();
             PreparedStatement ps = conn.prepareStatement("Select userId from mtuser where email=? and password=?");
             ps.setString(1,user.email);
-            ps.setString(2,user.password);
+            ps.setString(2,user.getPasswordHash());
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 user.setUserId(rs.getString(1));
@@ -49,8 +49,8 @@ class UserDao extends BaseDao{
             Connection conn = getConnection();
             PreparedStatement ps = conn.prepareStatement("Update mtuser set email=?, password=? where userId=?");
             ps.setString(3, user.userId)
-            ps.setString(1,user.email);
-            ps.setString(2,user.password);
+            ps.setString(1, user.email);
+            ps.setString(2, user.getPasswordHash());
             ps.execute();
         } catch (Exception exp) {
             System.out.println("oops." + exp.toString());
@@ -70,4 +70,6 @@ class UserDao extends BaseDao{
         }
         return result
     }
+
+
 }
