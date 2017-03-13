@@ -8,7 +8,6 @@ import groovyx.net.http.ContentType
 import groovyx.net.http.RESTClient
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.boot.test.context.SpringBootTest
-import spock.lang.Ignore
 import spock.lang.Shared
 import spock.lang.Specification
 /**
@@ -64,10 +63,23 @@ class UserControllerSpec extends Specification {
 
     }
 
-    @Ignore
-    def 'I can update a user.'() {
-        expect:
-        false
+    def 'I can authenticate a user.'() {
+        given:
+        restClient != null
 
+        when:
+        //  Create the user
+        def resp = restClient.post(path: "user/someuser@email.com",
+                                    body: "somePassword",
+                                    requestContentType: ContentType.JSON)
+        def user = resp.responseData
+
+        //Attempt to authenticate
+        def authResp = restClient.post(path: "/user/authenticate/someuser@email.com",
+                                        body: "somePassword",
+                                        requestContentType: ContentType.JSON)
+
+        then:
+        resp.responseData.userId == authResp.responseData.userId
     }
 }

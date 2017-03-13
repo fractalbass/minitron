@@ -29,9 +29,8 @@ class UserService {
     }
 
     def authenticateUser(User user) {
-        User authUser = userDao.getUser(user)
-        authUser != null
-
+        User authUser = userDao.getUserByEmailAndPassword(user)
+        authUser
     }
 
     def resetPassword(User user, String newPassword) {

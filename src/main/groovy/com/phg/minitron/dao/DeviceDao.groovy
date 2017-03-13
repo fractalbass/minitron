@@ -13,20 +13,22 @@ import java.sql.ResultSet
 class DeviceDao extends BaseDao {
 
     ArrayList<Device> getDevicesByUserId(UUID userId) {
-        Device device =  new Device();
+        ArrayList<Device> devices = new ArrayList<>()
         try {
             PreparedStatement preparedStatement = getPreparedStatement("select deviceCode, deviceId, from device where userId=?")
-            preparedStatement.setInt(1, userId)
+            preparedStatement.setString(1, userId.toString())
             preparedStatement.executeQuery()
-            ResultSet rs = ps.executeQuery();
+            ResultSet rs = ps.executeQuery()
             while (rs.next()) {
-                device.setDeviceCode(rs.getInt(1));
+                Device device =  new Device()
+                device.setDeviceCode(rs.getInt(1))
                 device.setDeviceId(rs.getInt(2))
+                devices.add(device)
             }
         } catch (Exception exp) {
             System.out.println("Error: " + exp.toString())
         }
-        return device
+        return devices
     }
 
     boolean save(Device device) {
@@ -60,10 +62,10 @@ class DeviceDao extends BaseDao {
     }
 
         ArrayList<Device> getAllDevices() {
-        boolean result = false;
+
         ArrayList<Device> devices = new ArrayList<>()
         try {
-            PreparedStatement preparedStatement = getPreparedStatement("select deviceId, deviceCode, userId from device)")
+            PreparedStatement ps = getPreparedStatement("select deviceId, deviceCode, userId from device")
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 Device d = new Device(deviceId: rs.getInt(1),
@@ -71,7 +73,7 @@ class DeviceDao extends BaseDao {
                                       userId: rs.getString(3))
                 devices.add(d)
             }
-            result=true
+
         } catch (Exception exp) {
             System.out.println("Error: " + exp.toString())
         }
@@ -81,7 +83,7 @@ class DeviceDao extends BaseDao {
     ArrayList<Device> getAllNonAssociatedDevices() {
         ArrayList<Device> devices = new ArrayList<>()
         try {
-            PreparedStatement preparedStatement = getPreparedStatement("select deviceId, deviceCode from device where userId is null)")
+            PreparedStatement ps = getPreparedStatement("select deviceId, deviceCode from device where userId is null")
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 Device d = new Device(deviceId: rs.getInt(1),

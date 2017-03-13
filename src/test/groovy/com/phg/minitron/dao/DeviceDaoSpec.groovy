@@ -1,7 +1,6 @@
 package com.phg.minitron.dao
 
 import com.phg.minitron.model.Device
-import spock.lang.Ignore
 import spock.lang.Specification
 
 import java.sql.Connection
@@ -58,22 +57,108 @@ class DeviceDaoSpec extends Specification{
         0 * _
     }
 
-    @Ignore
     def 'I should be able to get all devices for a user'() {
-        expect:
-        false
+        given:
+        UUID deviceId1 = UUID.randomUUID()
+        UUID deviceId2 = UUID.randomUUID()
+        UUID deviceId3 = UUID.randomUUID()
+        UUID userId = UUID.randomUUID()
+        Device device1 = new Device(userId: userId, deviceCode: "xyz121", deviceId: deviceId1)
+        Device device2 = new Device(userId: userId, deviceCode: "xyz122", deviceId: deviceId2)
+        Device device3 = new Device(userId: userId, deviceCode: "xyz123", deviceId: deviceId3)
+
+        PreparedStatement preparedStatement1 = Mock(PreparedStatement)
+        PreparedStatement preparedStatement2 = Mock(PreparedStatement)
+        when:
+        deviceDao.save(device1)
+        deviceDao.save(device2)
+        deviceDao.save(device3)
+        deviceDao.getDevicesByUserId(userId)
+
+
+        then:
+        3 * connection.prepareStatement("insert into device (deviceCode, deviceId, userId) values (?,?,?)") >> preparedStatement1
+        1 * connection.prepareStatement("select deviceCode, deviceId, from device where userId=?") >> preparedStatement2
+        3 * preparedStatement1.setString(3,userId.toString())
+        1 * preparedStatement1.setString(2,device1.deviceId)
+        1 * preparedStatement1.setString(2,device2.deviceId)
+        1 * preparedStatement1.setString(2,device3.deviceId)
+        1 * preparedStatement1.setString(1,device1.deviceCode)
+        1 * preparedStatement1.setString(1,device2.deviceCode)
+        1 * preparedStatement1.setString(1,device3.deviceCode)
+        3 * preparedStatement1.execute()
+        1 * preparedStatement2.setString(1, userId.toString())
+        1 * preparedStatement2.executeQuery()
+        0 * _
     }
 
-    @Ignore
     def 'I should be able to get all devices'() {
-        expect:
-        false
+        given:
+        UUID deviceId1 = UUID.randomUUID()
+        UUID deviceId2 = UUID.randomUUID()
+        UUID deviceId3 = UUID.randomUUID()
+        UUID userId = UUID.randomUUID()
+        Device device1 = new Device(userId: userId, deviceCode: "xyz121", deviceId: deviceId1)
+        Device device2 = new Device(userId: userId, deviceCode: "xyz122", deviceId: deviceId2)
+        Device device3 = new Device(userId: userId, deviceCode: "xyz123", deviceId: deviceId3)
+
+        PreparedStatement preparedStatement1 = Mock(PreparedStatement)
+        PreparedStatement preparedStatement2 = Mock(PreparedStatement)
+        when:
+        deviceDao.save(device1)
+        deviceDao.save(device2)
+        deviceDao.save(device3)
+        deviceDao.getAllDevices()
+
+
+        then:
+        3 * connection.prepareStatement("insert into device (deviceCode, deviceId, userId) values (?,?,?)") >> preparedStatement1
+        1 * connection.prepareStatement("select deviceId, deviceCode, userId from device") >> preparedStatement2
+        3 * preparedStatement1.setString(3,userId.toString())
+        1 * preparedStatement1.setString(2,device1.deviceId)
+        1 * preparedStatement1.setString(2,device2.deviceId)
+        1 * preparedStatement1.setString(2,device3.deviceId)
+        1 * preparedStatement1.setString(1,device1.deviceCode)
+        1 * preparedStatement1.setString(1,device2.deviceCode)
+        1 * preparedStatement1.setString(1,device3.deviceCode)
+        3 * preparedStatement1.execute()
+        1 * preparedStatement2.executeQuery()
+        0 * _
     }
 
-    @Ignore
+
     def 'I should be able to get all non-associated devices'() {
-        expect:
-        false
+        given:
+        UUID deviceId1 = UUID.randomUUID()
+        UUID deviceId2 = UUID.randomUUID()
+        UUID deviceId3 = UUID.randomUUID()
+        UUID userId = UUID.randomUUID()
+        Device device1 = new Device(userId: userId, deviceCode: "xyz121", deviceId: deviceId1)
+        Device device2 = new Device(userId: userId, deviceCode: "xyz122", deviceId: deviceId2)
+        Device device3 = new Device(userId: userId, deviceCode: "xyz123", deviceId: deviceId3)
+
+        PreparedStatement preparedStatement1 = Mock(PreparedStatement)
+        PreparedStatement preparedStatement2 = Mock(PreparedStatement)
+        when:
+        deviceDao.save(device1)
+        deviceDao.save(device2)
+        deviceDao.save(device3)
+        deviceDao.getAllNonAssociatedDevices()
+
+
+        then:
+        3 * connection.prepareStatement("insert into device (deviceCode, deviceId, userId) values (?,?,?)") >> preparedStatement1
+        1 * connection.prepareStatement("select deviceId, deviceCode from device where userId is null") >> preparedStatement2
+        3 * preparedStatement1.setString(3,userId.toString())
+        1 * preparedStatement1.setString(2,device1.deviceId)
+        1 * preparedStatement1.setString(2,device2.deviceId)
+        1 * preparedStatement1.setString(2,device3.deviceId)
+        1 * preparedStatement1.setString(1,device1.deviceCode)
+        1 * preparedStatement1.setString(1,device2.deviceCode)
+        1 * preparedStatement1.setString(1,device3.deviceCode)
+        3 * preparedStatement1.execute()
+        1 * preparedStatement2.executeQuery()
+        0 * _
     }
 
 

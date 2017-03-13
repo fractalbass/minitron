@@ -28,15 +28,17 @@ class UserDao extends BaseDao{
         return result
     }
 
-    User getUser(User user) {
+    User getUserByEmailAndPassword(User user) {
         try {
             Connection conn = getConnection();
-            PreparedStatement ps = conn.prepareStatement("Select userId from mtuser where email=? and password=?");
-            ps.setString(1,user.email);
-            ps.setString(2,user.getPasswordHash());
-            ResultSet rs = ps.executeQuery();
+            PreparedStatement ps = conn.prepareStatement("Select userId from mtuser where email=? and password=?")
+            ps.setString(1,user.email)
+            ps.setString(2,user.getPasswordHash())
+
+            ResultSet rs = ps.executeQuery()
             while (rs.next()) {
-                user.setUserId(rs.getString(1));
+                String uid = rs.getString(1)
+                user.userId=uid
             }
         } catch (Exception exp) {
             System.out.println("oops." + exp.toString());
