@@ -3,42 +3,6 @@ import { Device } from './device'
 import { User } from './user'
 import { Message } from './message'
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  template: '<h1>{{title}}</h1><hr>' +
-  '<label>Please log in:</label><br>' +
-  '<input size="30" [(ngModel)]="user.email" placeholder="email"><br>' +
-  '<input size="30" [(ngModel)]="user.passwd" type="password" placeholder="password"><br>' +
-  '<button name="login" (click)="showDevices()">login</button><br><br>' +
-  '<div>' +
-  '<li *ngFor="#device of devices">' +
-  '{{device?.id}}</li>' +
-  '</div>'
-})
-
-export class AppComponent {
-  title = 'Minitron Management Web Application';
-  devices = DEVICES;
-  user: User = {
-    email:'',
-    passwd:''
-  }
-  selectedDevice = new Device;
-
-  showDevices(): void {
-    alert("logged in.");
-    this.devices = DEVICES;
-  }
-
-  expand(device: Device): void {
-    alert("Selected");
-
-    device.messages = MESSAGES;
-  }
-}
-
 const MESSAGES: Message[] = [
   {id: '1', messageText: 'Message 1'},
   {id: '2', messageText: 'Message 2'},
@@ -64,6 +28,74 @@ const DEVICES: Device[] = [
   { id: '19', code: 'abc121', owner: 'mporter@blah.com',messages: [], show:false},
   { id: '20', code: 'abc122', owner: 'mporter@blah.com',messages: [], show:false}
 ];
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+  template: `<h1>{{title}}</h1><hr>
+  <div *ngIf="loggedOut">
+  <label>Please log in:</label><br>
+  <input size="30" [(ngModel)]="user.email" placeholder="email"><br>
+  <input size="30" [(ngModel)]="user.passwd" type="password" placeholder="password"><br>
+  <button name="login" (click)="showDevices()">login</button><br><br>
+  </div>
+  <div *ngIf="!loggedOut">
+  <table border="1" cellpadding="10">
+    <tr>
+    <td valign="top" width="200">
+    <h2>Devices:</h2>Click to select...<br>
+    <div *ngFor="let device of devices"
+      [class.selected]="device === selectedDevice"
+      (click)="onSelect(device)">
+      <span class="badge">{{device.id}}</span> {{device.code}}
+      <div *ngIf="" hidden>Device details.</div></div>
+      </td>
+    <td valign="top" width="600"><h2>Device Details</h2>
+      <div *ngIf="device">
+      <div>
+        <label>id: </label>{{device.id}}
+      </div>
+      <div>
+        <label>code: </label>{{device.code}}
+      </div><br>
+      <div>Configured Messages:</div>
+      <div *ngFor="let message of device.messages"
+      [class.selected]="message === selectedMessage"
+      (click)="onSelectMessage(message)">
+      <span class="badge">{{message.id}}</span>
+        <input [(ngModel)]="message.messageText" placeholder="Message Text"/></div>
+    </div>
+    </td>
+
+  </tr>
+  </table>
+  </div>
+  `
+})
+
+export class AppComponent {
+  title = 'Minitron Management Web Application';
+  loggedOut = true;
+  devices = DEVICES;
+  device: Device;
+  user: User = {
+    email:'',
+    passwd:''
+  };
+  selectedDevice = new Device;
+
+  showDevices(): void {
+    this.devices = DEVICES;
+    this.loggedOut=false;
+  }
+
+  onSelect(device: Device): void {
+    this.device = device;
+  }
+}
+
+
 
 
 
