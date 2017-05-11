@@ -73,5 +73,24 @@ class UserDao extends BaseDao{
         return result
     }
 
+    User getUserByEmail(User user) {
+        try {
+            Connection conn = getConnection();
+            PreparedStatement ps = conn.prepareStatement("Select userId from mtuser where email=?")
+            ps.setString(1,user.email)
+            ps.setString(2,user.getPasswordHash())
+
+            ResultSet rs = ps.executeQuery()
+            while (rs.next()) {
+                String uid = rs.getString(1)
+                user.userId=uid
+            }
+        } catch (Exception exp) {
+            System.out.println("oops." + exp.toString());
+        }
+        return user;
+    }
+
+
 
 }

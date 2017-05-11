@@ -48,7 +48,7 @@ class UserDaoSpec extends Specification{
 
 
         when:
-        userDao.getUser(user)
+        userDao.getUserByEmailAndPassword(user)
         then:
         1 * connection.prepareStatement("Select userId from mtuser where email=? and password=?") >> preparedStatement
         1 * preparedStatement.setString(1, "some@email.com")

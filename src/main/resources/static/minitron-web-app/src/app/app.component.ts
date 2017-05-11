@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { Device } from './device'
 import { User } from './user'
 import { Message } from './message'
+import { UserService } from './user.service';
+import { Http, Headers, Response } from '@angular/http';
+import { RequestOptions } from '@angular/http';
 
 const MESSAGES: Message[] = [
   {id: '1', messageText: 'Message 1'},
@@ -75,9 +78,12 @@ const DEVICES: Device[] = [
 })
 
 export class AppComponent {
+
   title = 'Minitron Management Web Application';
   loggedOut = true;
+  http = Http;
   devices = DEVICES;
+  userService = UserService;
   device: Device;
   user: User = {
     email:'',
@@ -86,6 +92,7 @@ export class AppComponent {
   selectedDevice = new Device;
 
   showDevices(): void {
+    this.userService.getUser(1);
     this.devices = DEVICES;
     this.loggedOut=false;
   }

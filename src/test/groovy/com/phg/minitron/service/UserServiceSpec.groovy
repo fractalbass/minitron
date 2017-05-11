@@ -48,7 +48,7 @@ class UserServiceSpec extends Specification{
 
         then:
         authUser!=null
-        1 * userDao.getUser(user) >> authenticatedUser
+        1 * userDao.getUserByEmailAndPassword(_) >> authenticatedUser
         0 * _
 
     }
@@ -73,7 +73,7 @@ class UserServiceSpec extends Specification{
         then:
         registeredUser.userId == uuid
         registeredUser.getPasswordHash() == User.getPasswordHash("newPassword")
-        1 * userDao.getUser(_) >> user
+        1 * userDao.getUserByEmail(_) >> user
         1 * userDao.update(user) >> updatedUser
         0 * _
     }

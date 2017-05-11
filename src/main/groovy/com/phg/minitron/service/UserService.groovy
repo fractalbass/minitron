@@ -34,7 +34,7 @@ class UserService {
     }
 
     def resetPassword(User user, String newPassword) {
-        User u = userDao.getUser(user)
+        User u = userDao.getUserByEmail(user)
         u.setPassword(newPassword)
         userDao.update(u)
         u
