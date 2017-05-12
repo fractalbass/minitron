@@ -8,7 +8,7 @@ import java.sql.PreparedStatement
 /**
  * Created by milesporter on 2/26/17.
  */
-class UserDaoSpec extends Specification{
+class UserDaoSpec extends Specification {
 
     UserDao userDao
     Connection connection
@@ -32,9 +32,9 @@ class UserDaoSpec extends Specification{
 
         then:
         1 * connection.prepareStatement("insert into mtuser (userId, email, password) values (?,?,?)") >> preparedStatement
-        1 * preparedStatement.setString(1,userId.toString())
-        1 * preparedStatement.setString(2,"some@email.com")
-        1 * preparedStatement.setString(3,hash)
+        1 * preparedStatement.setString(1, userId.toString())
+        1 * preparedStatement.setString(2, "some@email.com")
+        1 * preparedStatement.setString(3, hash)
         1 * preparedStatement.execute()
         0 * _
     }
@@ -78,5 +78,18 @@ class UserDaoSpec extends Specification{
 
     }
 
+    def 'I can get a list of all users'() {
+        given:
+        PreparedStatement preparedStatement = Mock(PreparedStatement)
 
+
+        when:
+        userDao.getAllUsers()
+        then:
+        1 * connection.prepareStatement("Select userId, email from mtuser") >> preparedStatement
+        1 * preparedStatement.executeQuery()
+        0 * _
+
+
+    }
 }

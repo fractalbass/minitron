@@ -40,5 +40,10 @@ class UserService {
         u
     }
 
+    def getAllUsers() {
+        ArrayList<User> allUsers = userDao.getAllUsers()
+        return allUsers
+    }
+
 
 }

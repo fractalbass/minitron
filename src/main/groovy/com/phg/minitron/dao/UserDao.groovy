@@ -91,6 +91,24 @@ class UserDao extends BaseDao{
         return user;
     }
 
+    List<User> getAllUsers() {
+        ArrayList<User> users = new ArrayList<>()
+        try {
+            Connection conn = getConnection();
+            PreparedStatement ps = conn.prepareStatement("Select userId, email from mtuser")
+            ResultSet rs = ps.executeQuery()
+            while (rs.next()) {
+                User u = new User()
+                u.userId=rs.getString(1)
+                u.email=rs.getString(2)
+                users.add(u)
+            }
+        } catch (Exception exp) {
+            System.out.println("oops." + exp.toString());
+        }
+        return users;
+    }
+
 
 
 }

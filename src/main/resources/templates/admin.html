@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:tiles="http://www.thymeleaf.org">
+<head>
+    <title>Minitron Admin Menu</title>
+</head>
+<body>
+<div>
+    <h1>Minitron Admin Menu</h1>
+</div>
+<div>
+    <div class="userList" th:unless="${#lists.isEmpty(userList)}">
+
+        <h2> Users: </h2>
+
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Reset Password</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="user : ${userList}">
+                <td>${{user.id}}</td>
+                <td>${{user.email}}</td>
+                <td><input type="text" placeholder="New_Password"/><button value="Reset" id="reset_${user.id}"></button></td>
+                <td><button value="Delete" id="delete_${user.id}"></button></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <div>
+        Add a user:<br/>
+        <form action="addUser" method="post">
+            <input name="email" type="text" placeholder="email"/><br/>
+            <input name="passwd" type="password" placeholder="password"/><br/>
+            <input type="submit" value="Add User"/><br/>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
