@@ -15,10 +15,9 @@
 
         <h2> Users: </h2>
 
-        <table>
+        <table border="1">
             <thead>
             <tr>
-                <th>ID</th>
                 <th>Email</th>
                 <th>Reset Password</th>
                 <th>Delete</th>
@@ -26,15 +25,26 @@
             </thead>
             <tbody>
             <tr th:each="user : ${userList}">
-                <td>${{user.id}}</td>
-                <td>${{user.email}}</td>
-                <td><input type="text" placeholder="New_Password"/><button value="Reset" id="reset_${user.id}"></button></td>
-                <td><button value="Delete" id="delete_${user.id}"></button></td>
+                <td> <p th:text="${user.email}" /></td>
+                <td>
+                    <form action="passwdReset" method="post">
+                        <input type="hidden" name="userId" th:value="${user.userId}"/>
+                        <input type="text" name="passwd" placeholder="Password"/>
+                        <input type="submit" value="Reset"/>
+                    </form>
+                </td>
+                <td>
+                <form action="deleteUser" method="post">
+                    <input type="hidden" name="userId" th:value="${user.userId}"/>
+                    <input type="submit" value="Delete"/>
+                </form>
+                </td>
             </tr>
             </tbody>
         </table>
 
     </div>
+    <hr/>
     <div>
         Add a user:<br/>
         <form action="addUser" method="post">

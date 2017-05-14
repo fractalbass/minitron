@@ -28,17 +28,17 @@ class UserDao extends BaseDao{
         return result
     }
 
-    User getUserByEmailAndPassword(User user) {
+    User getUserByUserId(String userId) {
+        User user = null;
         try {
             Connection conn = getConnection();
-            PreparedStatement ps = conn.prepareStatement("Select userId from mtuser where email=? and password=?")
-            ps.setString(1,user.email)
-            ps.setString(2,user.getPasswordHash())
-
+            PreparedStatement ps = conn.prepareStatement("Select email from mtuser where userId=?")
+            ps.setString(1,userId)
             ResultSet rs = ps.executeQuery()
             while (rs.next()) {
-                String uid = rs.getString(1)
-                user.userId=uid
+                user = new User()
+                user.userId = userId
+                user.email = rs.getString(1)
             }
         } catch (Exception exp) {
             System.out.println("oops." + exp.toString());
@@ -73,6 +73,20 @@ class UserDao extends BaseDao{
         return result
     }
 
+    boolean deleteUserById(String userId) {
+        boolean result = false
+        try {
+            Connection conn = getConnection();
+            PreparedStatement ps = conn.prepareStatement("delete from mtuser where userId=?");
+            ps.setString(1, userId)
+            ps.execute();
+            result = true
+        } catch (Exception exp) {
+            System.out.println("oops." + exp.toString());
+        }
+        return result
+    }
+
     User getUserByEmail(User user) {
         try {
             Connection conn = getConnection();
@@ -95,7 +109,7 @@ class UserDao extends BaseDao{
         ArrayList<User> users = new ArrayList<>()
         try {
             Connection conn = getConnection();
-            PreparedStatement ps = conn.prepareStatement("Select userId, email from mtuser")
+            PreparedStatement ps = conn.prepareStatement("Select userId, email from mtuser order by userId")
             ResultSet rs = ps.executeQuery()
             while (rs.next()) {
                 User u = new User()

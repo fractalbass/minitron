@@ -42,7 +42,17 @@ class UserService {
 
     def getAllUsers() {
         ArrayList<User> allUsers = userDao.getAllUsers()
-        return allUsers
+        allUsers
+    }
+
+    def getUserByUserId(String userId) {
+        User user = userDao.getUserByUserId(userId)
+        user
+    }
+
+    def deleteUserByUserId(String userId) {
+        boolean result = userDao.deleteUserById(userId)
+        return result
     }
 
 
