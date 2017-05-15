@@ -86,7 +86,7 @@ class UserDaoSpec extends Specification {
         when:
         userDao.getAllUsers()
         then:
-        1 * connection.prepareStatement("Select userId, email from mtuser") >> preparedStatement
+        1 * connection.prepareStatement("Select userId, email from mtuser order by userId") >> preparedStatement
         1 * preparedStatement.executeQuery()
         0 * _
 

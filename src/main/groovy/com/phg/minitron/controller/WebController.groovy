@@ -24,14 +24,22 @@ public class WebController {
     String admin_passwd
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String getMessage(@RequestParam String username, @RequestParam String passwd, Model model) {
-        log.info("Login attempt with ${username}, ${passwd}")
-        if (username.equals("superuser") && passwd.equals(admin_passwd)) {
+    public String getMessage(@RequestParam String email, @RequestParam String passwd, Model model) {
+        log.info("Login attempt with ${email}, ${passwd}")
+        if (email.equals("superuser") && passwd.equals(admin_passwd)) {
             ArrayList<User> allUsers = userService.getAllUsers()
             model.addAttribute("userList", allUsers)
             return "admin"
         } else {
-            return "main"
+            User user = new User(email: email, password: passwd)
+            //user.setEmail(email)
+            //emailuser.setPassword(passwd)
+            User authUser = userService.authenticateUser(user)
+            if (authUser!=null) {
+                return 'main'
+            } else {
+                return 'relogin'
+            }
         }
     }
 
@@ -65,7 +73,5 @@ public class WebController {
         model.addAttribute("userList", allUsers)
         return "admin"
     }
-
-
 
 }

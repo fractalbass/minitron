@@ -34,10 +34,10 @@ class UserService {
     }
 
     def resetPassword(User user, String newPassword) {
-        User u = userDao.getUserByEmail(user)
-        u.setPassword(newPassword)
-        userDao.update(u)
-        u
+        User resetUser = userDao.getUserByEmail(user)
+        resetUser.setPassword(newPassword)
+        userDao.update(resetUser)
+        resetUser
     }
 
     def getAllUsers() {

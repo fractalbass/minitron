@@ -29,7 +29,7 @@
                 <td>
                     <form action="passwdReset" method="post">
                         <input type="hidden" name="userId" th:value="${user.userId}"/>
-                        <input type="text" name="passwd" placeholder="Password"/>
+                        <input type="password" name="passwd" placeholder="Password"/>
                         <input type="submit" value="Reset"/>
                     </form>
                 </td>
@@ -54,6 +54,7 @@
         </form>
     </div>
 </div>
-
+<br/><br/>
+<a href="/index.html">Logout.</a>
 </body>
 </html>
