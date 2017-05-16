@@ -120,4 +120,22 @@ class DeviceDao extends BaseDao {
         return device
     }
 
+    Device getDeviceByCode(String code) {
+        Device device = null
+        try {
+            PreparedStatement ps = getPreparedStatement("select userId, deviceId, deviceName from device where deviceCode = ?")
+            ps.setString(1, code)
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                device = new Device(userId: rs.getString(1),
+                        deviceId: rs.getString(2),
+                        deviceName: rs.getString(3),
+                        deviceCode: code)
+            }
+        } catch (Exception exp) {
+            log.error("Error getting device by ID: " + exp.toString())
+        }
+        return device
+    }
+
 }

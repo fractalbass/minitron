@@ -15,10 +15,10 @@ class MessageController {
     @Autowired
     MessageService messageService
 
-    @RequestMapping(value = "/message/{device}/{channel}", method = RequestMethod.GET)
-    public String getMessage(@PathVariable int device, @PathVariable int channel) {
-        Message msg = new Message(deviceId: device, channel: channel)
-        Message newMessage = messageService.getByDeviceAndChannel(msg)
+    @RequestMapping(value = "/message/{deviceCode}/{channel}", method = RequestMethod.GET)
+    public String getMessage(@PathVariable String deviceCode, @PathVariable int channel) {
+
+        Message newMessage = messageService.getByDeviceCodeAndChannel(deviceCode, channel)
         return newMessage.messageText
     }
 
