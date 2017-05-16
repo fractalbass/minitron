@@ -7,7 +7,48 @@
     <title>Title</title>
 </head>
 <body>
-    <p th:text="'Hello, ' + ${name} + '!'" />
+<div>
+    <h2><p align="center">Minitron User Dashboard</p></h2>
+    <p align="center" th:text="'Welcome, ' + ${user.email} + '!'" />
+</div>
+<hr/>
+<div>
+    Known User Devices:  (Click to view details and set messages.)
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Email</th>
+            <th>Reset Password</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user : ${userList}">
+            <td> <p th:text="${user.email}" /></td>
+            <td>
+                <form action="passwdReset" method="post">
+                    <input type="hidden" name="userId" th:value="${user.userId}"/>
+                    <input type="password" name="passwd" placeholder="Password"/>
+                    <input type="submit" value="Reset"/>
+                </form>
+            </td>
+            <td>
+                <form action="deleteUser" method="post">
+                    <input type="hidden" name="userId" th:value="${user.userId}"/>
+                    <input type="submit" value="Delete"/>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<hr align="center" width="50%">
+
+<div>
+    Add a new device:
+</div>
+
+</div>
 </body>
 </html>
 

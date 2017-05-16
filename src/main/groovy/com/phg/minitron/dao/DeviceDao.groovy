@@ -1,6 +1,7 @@
 package com.phg.minitron.dao
 
 import com.phg.minitron.model.Device
+import groovy.util.logging.Slf4j
 import org.springframework.stereotype.Component
 
 import java.sql.PreparedStatement
@@ -9,13 +10,14 @@ import java.sql.ResultSet
 /**
  * Created by milesporter on 2/26/17.
  */
+@Slf4j
 @Component
 class DeviceDao extends BaseDao {
 
     ArrayList<Device> getDevicesByUserId(UUID userId) {
         ArrayList<Device> devices = new ArrayList<>()
         try {
-            PreparedStatement preparedStatement = getPreparedStatement("select deviceCode, deviceId, from device where userId=?")
+            PreparedStatement preparedStatement = getPreparedStatement("select deviceCode, deviceId, deviceName from device where userId=?")
             preparedStatement.setString(1, userId.toString())
             preparedStatement.executeQuery()
             ResultSet rs = ps.executeQuery()
@@ -23,10 +25,11 @@ class DeviceDao extends BaseDao {
                 Device device =  new Device()
                 device.setDeviceCode(rs.getInt(1))
                 device.setDeviceId(rs.getInt(2))
+                device.setDeviceName((rs.getString(3)))
                 devices.add(device)
             }
         } catch (Exception exp) {
-            System.out.println("Error: " + exp.toString())
+            log.error("Error getting device: " + exp.toString())
         }
         return devices
     }
@@ -34,14 +37,15 @@ class DeviceDao extends BaseDao {
     boolean save(Device device) {
         boolean result = false;
         try {
-            PreparedStatement preparedStatement = getPreparedStatement("insert into device (deviceCode, deviceId, userId) values (?,?,?)")
+            PreparedStatement preparedStatement = getPreparedStatement("insert into device (deviceCode, deviceId, deviceName, userId) values (?,?,?,?)")
             preparedStatement.setString(1, device.deviceCode)
             preparedStatement.setString(2, device.deviceId)
-            preparedStatement.setString(3, device.userId)
+            preparedStatement.setString(3, device.deviceName)
+            preparedStatement.setString(4, device.userId)
             preparedStatement.execute()
             result=true
         } catch (Exception exp) {
-            System.out.println("Error: " + exp.toString())
+            log.error("Error saving device: " + exp.toString())
         }
         return result
     }
@@ -49,14 +53,15 @@ class DeviceDao extends BaseDao {
     boolean update(Device device) {
         boolean result = false;
         try {
-            PreparedStatement preparedStatement = getPreparedStatement("update device set deviceCode=?, userId=? where deviceId=?")
+            PreparedStatement preparedStatement = getPreparedStatement("update device set deviceCode=?, userId=?, deviceName=? where deviceId=?")
             preparedStatement.setString(1, device.deviceCode)
-            preparedStatement.setString(3, device.deviceId)
             preparedStatement.setString(2, device.userId)
+            preparedStatement.setString(3, device.deviceName)
+            preparedStatement.setString(4, device.deviceId)
             preparedStatement.execute()
             result=true
         } catch (Exception exp) {
-            System.out.println("Error: " + exp.toString())
+            log.error("Error updating device: " + exp.toString())
         }
         return result
     }
@@ -65,17 +70,18 @@ class DeviceDao extends BaseDao {
 
         ArrayList<Device> devices = new ArrayList<>()
         try {
-            PreparedStatement ps = getPreparedStatement("select deviceId, deviceCode, userId from device")
+            PreparedStatement ps = getPreparedStatement("select deviceId, deviceCode, deviceName, userId from device")
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 Device d = new Device(deviceId: rs.getInt(1),
                                       deviceCode: rs.getInt(2),
-                                      userId: rs.getString(3))
+                                      deviceName: rs.getString(3),
+                                      userId: rs.getString(4))
                 devices.add(d)
             }
 
         } catch (Exception exp) {
-            System.out.println("Error: " + exp.toString())
+            log.error("Error getting all devices: " + exp.toString())
         }
         return devices
     }
@@ -83,15 +89,16 @@ class DeviceDao extends BaseDao {
     ArrayList<Device> getAllNonAssociatedDevices() {
         ArrayList<Device> devices = new ArrayList<>()
         try {
-            PreparedStatement ps = getPreparedStatement("select deviceId, deviceCode from device where userId is null")
+            PreparedStatement ps = getPreparedStatement("select deviceId, deviceCode, deviceName from device where userId is null")
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 Device d = new Device(deviceId: rs.getInt(1),
-                                      deviceCode: rs.getInt(2))
+                                      deviceCode: rs.getInt(2),
+                                      deviceName: rs.getString(3))
                 devices.add(d)
             }
         } catch (Exception exp) {
-            System.out.println("Error: " + exp.toString())
+            log.error("Error: " + exp.toString())
         }
     return devices
     }

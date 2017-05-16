@@ -1,6 +1,7 @@
 package com.phg.minitron.dao
 
 import com.phg.minitron.model.User
+import groovy.util.logging.Slf4j
 import org.springframework.stereotype.Component
 
 import java.sql.Connection
@@ -10,6 +11,7 @@ import java.sql.ResultSet
 /**
  * Created by milesporter on 2/26/17.
  */
+@Slf4j
 @Component
 class UserDao extends BaseDao{
 
@@ -23,7 +25,7 @@ class UserDao extends BaseDao{
             preparedStatement.execute()
             result=true
         } catch (Exception exp) {
-            System.out.println("Error: " + exp.toString())
+            log.error("Error saving user: " + exp.toString())
         }
         return result
     }
@@ -41,9 +43,26 @@ class UserDao extends BaseDao{
                 user.email = rs.getString(1)
             }
         } catch (Exception exp) {
-            System.out.println("oops." + exp.toString());
+            log.error("Error getting user by ID: " + exp.toString());
         }
         return user;
+    }
+
+    boolean checkIfEmailExists(String email) {
+        int count=0
+        try {
+            Connection conn = getConnection();
+            PreparedStatement ps = conn.prepareStatement("Select count(email) from mtuser where email=?");
+            ps.setString(1, email);
+            ResultSet rs = ps.executeQuery()
+            while (rs.next()) {
+                count = rs.getInt(1)
+            }
+        }
+        catch (Exception exp) {
+            log.error("Error checking if user email exists: " + exp.toString())
+        }
+        return (count>0)
     }
 
     User update(User user) {
@@ -55,7 +74,7 @@ class UserDao extends BaseDao{
             ps.setString(2, user.getPasswordHash());
             ps.execute();
         } catch (Exception exp) {
-            System.out.println("oops." + exp.toString());
+           log.error("Error updating user: " + exp.toString());
         }
         return user;
     }
@@ -68,7 +87,7 @@ class UserDao extends BaseDao{
             ps.execute();
             result = true
         } catch (Exception exp) {
-            System.out.println("oops." + exp.toString());
+            log.error("Error cleaning (deleting) all users: " + exp.toString());
         }
         return result
     }
@@ -82,7 +101,7 @@ class UserDao extends BaseDao{
             ps.execute();
             result = true
         } catch (Exception exp) {
-            System.out.println("oops." + exp.toString());
+            log.error("Error deleting user by userId: " + exp.toString());
         }
         return result
     }
@@ -100,7 +119,7 @@ class UserDao extends BaseDao{
                 user.userId=uid
             }
         } catch (Exception exp) {
-            System.out.println("oops." + exp.toString());
+            log.error("Error getting user by email: " + exp.toString());
         }
         return user;
     }
@@ -120,7 +139,7 @@ class UserDao extends BaseDao{
                 authUser.userId = uid
             }
         } catch (Exception exp) {
-            System.out.println("oops." + exp.toString());
+            log.error("Error getting user by email and password: " + exp.toString());
         }
         return authUser;
     }
@@ -138,11 +157,9 @@ class UserDao extends BaseDao{
                 users.add(u)
             }
         } catch (Exception exp) {
-            System.out.println("oops." + exp.toString());
+            log.error("Error getting all users: " + exp.toString());
         }
         return users;
     }
-
-
 
 }

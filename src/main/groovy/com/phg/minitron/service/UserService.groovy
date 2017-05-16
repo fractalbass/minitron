@@ -1,6 +1,7 @@
 package com.phg.minitron.service
 
 import com.phg.minitron.dao.UserDao
+import com.phg.minitron.exception.UserAlreadyExistsException
 import com.phg.minitron.model.User
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
@@ -13,7 +14,11 @@ class UserService {
     @Autowired
     UserDao userDao
 
-    def registerUser(User user) {
+    def registerUser(User user) throws UserAlreadyExistsException {
+
+        if (userDao.checkIfEmailExists(user.email)) {
+            throw new UserAlreadyExistsException("User ${user.email} already exists.")
+        }
 
         user.userId=getUuid()
         if (userDao.save(user)) {

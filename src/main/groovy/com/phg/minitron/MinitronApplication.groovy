@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.context.annotation.ComponentScan
 
-@ComponentScan(basePackages = ["com.phg.minitron.dao", "com.phg.minitron.service", "com.phg.minitron.controller"])
+@ComponentScan(basePackages = ["com.phg.minitron.dao", "com.phg.minitron.service", "com.phg.minitron.controller", "com.phg.minitron.exception"])
 @SpringBootApplication
 public class MinitronApplication {
 

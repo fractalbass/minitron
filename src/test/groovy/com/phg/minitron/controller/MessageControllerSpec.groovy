@@ -3,20 +3,18 @@ package com.phg.minitron.controller
 import com.phg.minitron.MinitronApplication
 import com.phg.minitron.dao.MessageDao
 import com.phg.minitron.integration.DatabaseUtil
-import com.phg.minitron.integration.DockerDependent
 import com.phg.minitron.model.Message
 import groovyx.net.http.ContentType
 import groovyx.net.http.RESTClient
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.boot.test.context.SpringBootTest
-import spock.lang.Ignore
 import spock.lang.Shared
 import spock.lang.Specification
 /**
  * Created by milesporter on 2/26/17.
  */
-@Ignore
-@DockerDependent
+//@Ignore
+//@DockerDependent
 @SpringBootTest(classes = MinitronApplication.class,
         webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class MessageControllerSpec extends Specification{

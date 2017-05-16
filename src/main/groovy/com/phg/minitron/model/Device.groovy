@@ -5,6 +5,7 @@ package com.phg.minitron.model
  */
 class Device {
 
+    String deviceName
     String deviceCode
     String deviceId
     String userId

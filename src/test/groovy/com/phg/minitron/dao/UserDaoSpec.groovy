@@ -39,6 +39,20 @@ class UserDaoSpec extends Specification {
         0 * _
     }
 
+    def 'I can see if a user email already exists'() {
+        given:
+        PreparedStatement preparedStatement = Mock(PreparedStatement)
+
+        when:
+        userDao.checkIfEmailExists("email@test.com")
+
+        then:
+        1 * connection.prepareStatement("Select count(email) from mtuser where email=?") >> preparedStatement
+        1 * preparedStatement.setString(1, "email@test.com");
+        1 * preparedStatement.executeQuery()
+        0 * _
+    }
+
 
     def 'I can get a user by email and password'() {
         given:

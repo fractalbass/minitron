@@ -1,6 +1,7 @@
 package com.phg.minitron.service
 
 import com.phg.minitron.dao.UserDao
+import com.phg.minitron.exception.UserAlreadyExistsException
 import com.phg.minitron.model.User
 import spock.lang.Specification
 /**
@@ -32,7 +33,26 @@ class UserServiceSpec extends Specification{
 
         then:
         registeredUser.userId == uuid
+        1 * userDao.checkIfEmailExists(_) >> false
         1 * userDao.save(user) >> true
+        0 * _
+    }
+
+    //I can register
+    def 'I cannot register a user if they already exist'() {
+        given:
+        def uuid = UUID.randomUUID()
+        User user = new User(email: "some@Email.com", password: "somePassword")
+        userService.metaClass.getUuid = {
+            uuid
+        }
+
+        when:
+        def registeredUser = userService.registerUser(user)
+
+        then:
+        1 * userDao.checkIfEmailExists(_) >> true
+        final UserAlreadyExistsException exception = thrown()
         0 * _
     }
 

@@ -35,6 +35,7 @@ public class WebController {
             //user.setEmail(email)
             //emailuser.setPassword(passwd)
             User authUser = userService.authenticateUser(user)
+            model.addAttributes("user",authUser)
             if (authUser!=null) {
                 return 'main'
             } else {
@@ -53,6 +54,17 @@ public class WebController {
         ArrayList<User> allUsers = userService.getAllUsers()
         model.addAttribute("userList", allUsers)
         return "admin"
+    }
+
+    @RequestMapping(value = "/signup", method = RequestMethod.POST)
+    public String signup(@RequestParam String email, @RequestParam String passwd, Model model) {
+        log.info("Attempting to add user ${email}, ${passwd}")
+        User  newUser = new User();
+        newUser.setEmail(email)
+        newUser.setPassword(passwd)
+        userService.registerUser(newUser)
+        model.addAttribute("user",newUser)
+        return "main"
     }
 
     @RequestMapping(value = "/passwdReset", method = RequestMethod.POST)
