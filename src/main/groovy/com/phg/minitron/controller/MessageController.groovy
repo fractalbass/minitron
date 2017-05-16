@@ -19,7 +19,8 @@ class MessageController {
     public String getMessage(@PathVariable String deviceCode, @PathVariable int channel) {
 
         Message newMessage = messageService.getByDeviceCodeAndChannel(deviceCode, channel)
-        return newMessage.messageText
+        //  For devices, we wrap the message in verticle pipes.
+        return "|" + newMessage.messageText + "|"
     }
 
     @RequestMapping(value = "/message", method = RequestMethod.POST)
