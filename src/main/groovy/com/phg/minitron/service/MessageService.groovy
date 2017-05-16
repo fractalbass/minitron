@@ -40,5 +40,14 @@ class MessageService {
     def delete(Message message) {
         messageDao.delete(message)
     }
+
+    def getAllByDeviceId(UUID deviceId) {
+        messageDao.getByDevice(deviceId.toString())
+    }
+
+
+    def getByMessageId(UUID messageId) {
+        messageDao.getByMessageId(messageId.toString())
+    }
 }
 

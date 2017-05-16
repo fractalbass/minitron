@@ -4,7 +4,7 @@
       xmlns:th="http://www.thymeleaf.org"
       xmlns:tiles="http://www.thymeleaf.org">
 <head>
-    <title>Title</title>
+    <title>User Device List</title>
 </head>
 <body>
 <div>
@@ -12,43 +12,52 @@
     <p align="center" th:text="'Welcome, ' + ${user.email} + '!'" />
 </div>
 <hr/>
-<div>
-    Known User Devices:  (Click to view details and set messages.)
+<div th:if="${not #lists.isEmpty(deviceList)}">
+    Known User Devices:  (Click to view details and set messages.)<br/><br/>
     <table border="1">
         <thead>
         <tr>
-            <th>Email</th>
-            <th>Reset Password</th>
-            <th>Delete</th>
+            <th>Name</th>
+            <th>Code</th>
+            <th>Messages</th>
+            <th>Delete Device</th>
         </tr>
         </thead>
         <tbody>
-        <tr th:each="user : ${userList}">
-            <td> <p th:text="${user.email}" /></td>
+        <tr th:each="device : ${deviceList}">
+            <td> <p th:text="${device.deviceName}" /></td>
+            <td> <p th:text="${device.deviceCode}" /></td>
             <td>
-                <form action="passwdReset" method="post">
+                <form action="deviceMessages" method="post">
+                    <input type="hidden" name="deviceId" th:value="${device.deviceId}"/>
                     <input type="hidden" name="userId" th:value="${user.userId}"/>
-                    <input type="password" name="passwd" placeholder="Password"/>
-                    <input type="submit" value="Reset"/>
+                    <input type="submit" value="Show Messages"/>
                 </form>
             </td>
             <td>
-                <form action="deleteUser" method="post">
-                    <input type="hidden" name="userId" th:value="${user.userId}"/>
-                    <input type="submit" value="Delete"/>
+                <form action="deleteDevice" method="post">
+                    <input type="hidden" name="deviceId" th:value="${device.deviceId}"/>
+                    <input type="submit" value="Delete Device"/>
                 </form>
             </td>
         </tr>
         </tbody>
     </table>
 </div>
-<hr align="center" width="50%">
-
+<div th:if="${#lists.isEmpty(deviceList)}">
+You have no devices defined.
+</div>
+<br/><br/>
+<hr align="center" width="50%"/>
+Add a new device below. A device code that you can use in your device will be generated for you.<br/>
 <div>
-    Add a new device:
+    <form action="addDevice" method="post">
+        <input placeholder="Device Name" type="text" name="deviceName" /><br/>
+        <input type="hidden" name="userId" th:value="${user.userId}"/>
+        <input type="submit" value="Create Device"/>
+    </form>
 </div>
 
-</div>
 </body>
 </html>
 

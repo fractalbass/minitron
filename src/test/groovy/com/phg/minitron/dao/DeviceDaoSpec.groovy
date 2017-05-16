@@ -172,5 +172,18 @@ class DeviceDaoSpec extends Specification{
         0 * _
     }
 
+//("select userId, deviceCode, deviceName from device where deviceId = ?")
+    def 'I should be able to get a device by its id.'() {
+        given:
+        PreparedStatement preparedStatement = Mock(PreparedStatement)
 
+        when:
+        deviceDao.getDeviceById('123123')
+
+        then:
+        1 * connection.prepareStatement("select userId, deviceCode, deviceName from device where deviceId = ?") >> preparedStatement
+        1 * preparedStatement.setString(1, '123123')
+        1 * preparedStatement.executeQuery()
+        0 * _
+    }
 }

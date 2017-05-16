@@ -1,7 +1,9 @@
 package com.phg.minitron.service
 
 import com.phg.minitron.dao.DeviceDao
+import com.phg.minitron.dao.MessageDao
 import com.phg.minitron.model.Device
+import com.phg.minitron.model.Message
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 
@@ -13,6 +15,9 @@ class DeviceService {
 
     @Autowired
     DeviceDao deviceDao
+
+    @Autowired
+    MessageDao messageDao
 
     ArrayList<Device> getDevicesForUser(UUID userId) {
         return deviceDao.getDevicesByUserId(userId)
@@ -36,5 +41,27 @@ class DeviceService {
 
     def getAllNonAssociatedDevices() {
         deviceDao.getAllNonAssociatedDevices()
+    }
+
+    def createDeviceForUser(String deviceName, UUID userId) {
+        Device device = new Device()
+        device.deviceId = UUID.randomUUID()
+        device.userId=userId
+        device.deviceName=deviceName
+        device.deviceCode=Device.generateCode()
+        deviceDao.save(device)
+        (0..11).each() { channel ->
+            Message message = new Message()
+            message.channel = channel
+            message.deviceId = device.deviceId
+            message.messageText = "Coming soon."
+            message.messageId = UUID.randomUUID()
+            messageDao.save(message)
+        }
+        device
+    }
+
+    def getDeviceById(UUID deviceId) {
+        deviceDao.getDeviceById(deviceId.toString())
     }
 }

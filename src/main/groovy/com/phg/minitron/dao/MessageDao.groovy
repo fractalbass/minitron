@@ -86,4 +86,48 @@ public class MessageDao extends BaseDao{
         }
         result
     }
+
+    public ArrayList<Message> getByDevice(String deviceId) {
+        ArrayList<Message> messages = new ArrayList<>()
+        try {
+            Connection conn = getConnection();
+            PreparedStatement ps = conn.prepareStatement("Select message, messageId, channel from message where deviceId=? order by channel");
+            ps.setString(1,deviceId.toString());
+
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                Message message = new Message()
+                message.messageText= rs.getString(1)
+                message.messageId = rs.getString(2)
+                message.channel = rs.getInt(3)
+                messages.add(message)
+            }
+        } catch (Exception exp) {
+            System.out.println("oops." + exp.toString());
+        }
+        return messages;
+    }
+
+    //todo: test this/
+    public Message getByMessageId(String messageId) {
+        Message message = null
+        try {
+            Connection conn = getConnection();
+            PreparedStatement ps = conn.prepareStatement("Select message, channel, deviceId from message where messageId=?");
+            ps.setString(1,messageId);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                message = new Message()
+                message.setMessageText(rs.getString(1))
+                message.setChannel(rs.getInt(2))
+                message.setDeviceId(rs.getString(3))
+                message.messageId = UUID.fromString(messageId)
+            }
+        } catch (Exception exp) {
+            System.out.println("Error getting message by message ID." + exp.toString());
+        }
+        return message;
+    }
+
+
 }

@@ -19,12 +19,11 @@ class DeviceDao extends BaseDao {
         try {
             PreparedStatement preparedStatement = getPreparedStatement("select deviceCode, deviceId, deviceName from device where userId=?")
             preparedStatement.setString(1, userId.toString())
-            preparedStatement.executeQuery()
-            ResultSet rs = ps.executeQuery()
+            ResultSet rs = preparedStatement.executeQuery()
             while (rs.next()) {
                 Device device =  new Device()
-                device.setDeviceCode(rs.getInt(1))
-                device.setDeviceId(rs.getInt(2))
+                device.setDeviceCode(rs.getString(1))
+                device.setDeviceId(rs.getString(2))
                 device.setDeviceName((rs.getString(3)))
                 devices.add(device)
             }
@@ -66,7 +65,7 @@ class DeviceDao extends BaseDao {
         return result
     }
 
-        ArrayList<Device> getAllDevices() {
+    ArrayList<Device> getAllDevices() {
 
         ArrayList<Device> devices = new ArrayList<>()
         try {
@@ -101,6 +100,24 @@ class DeviceDao extends BaseDao {
             log.error("Error: " + exp.toString())
         }
     return devices
+    }
+
+    Device getDeviceById(String deviceId) {
+        Device device = null
+        try {
+            PreparedStatement ps = getPreparedStatement("select userId, deviceCode, deviceName from device where deviceId = ?")
+            ps.setString(1, deviceId)
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                device = new Device(userId: rs.getString(1),
+                        deviceCode: rs.getString(2),
+                        deviceName: rs.getString(3),
+                        deviceId: deviceId)
+                }
+        } catch (Exception exp) {
+            log.error("Error getting device by ID: " + exp.toString())
+        }
+        return device
     }
 
 }

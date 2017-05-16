@@ -104,4 +104,23 @@ class MessageDaoSpec extends Specification{
         0 * _
     }
 
+    def 'I should be able to get a list of messages by deviceId'() {
+        given:
+        Message m1 = new Message(messageId: '789', deviceId: '123', channel: 4, messageText: 'get me.')
+        Message m2 = new Message(messageId: '789', deviceId: '123', channel: 4, messageText: 'get me.')
+        Message m3 = new Message(messageId: '789', deviceId: '123', channel: 4, messageText: 'get me.')
+
+        PreparedStatement preparedStatement = Mock(PreparedStatement)
+        ResultSet rs = Mock(ResultSet)
+        def cnt=0
+        when:
+        messageDao.getByDevice('123')
+
+        then:
+        1 * connection.prepareStatement("Select message, messageId, channel from message where deviceId=? order by channel") >> preparedStatement
+        1 * preparedStatement.setString(1,'123')
+        1 * preparedStatement.executeQuery()
+        0 * _
+    }
+
 }

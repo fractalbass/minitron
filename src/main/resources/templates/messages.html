@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:tiles="http://www.thymeleaf.org">
+<head>
+    <title>User Device List</title>
+</head>
+<body>
+<div>
+    <h2><p align="center">Minitron User Dashboard - Messages</p></h2>
+    <p align="center" th:text="'Welcome, ' + ${user.email} + '!'" />
+</div>
+<hr/>
+<div>
+    <p align="center" th:text="'Messages for device ' + ${device.deviceName} + ''" />
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Channel</th>
+            <th>Message Text</th>
+            <th>Update</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="message : ${messageList}">
+            <form action="updateMessage" method="POST">
+                <td align="center"> <p th:text="${message.channel}" />
+                    <input type="hidden" name="messageId" th:value="${message.messageId}"/>
+                    <input type="hidden" name="deviceId" th:value="${device.deviceId}"/>
+                </td>
+                <td> <input name="messageText" type="text" size="40" th:value="${message.messageText}"/></td>
+                <td> <input type="submit" value="Update"/></td>
+            </form>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+
+
