@@ -7,12 +7,14 @@ import groovyx.net.http.ContentType
 import groovyx.net.http.RESTClient
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.boot.test.context.SpringBootTest
+import spock.lang.Ignore
 import spock.lang.Shared
 import spock.lang.Specification
 /**
  * Created by milesporter on 3/2/17.
  */
 //@DockerDependent
+@Ignore
 @SpringBootTest(classes = MinitronApplication.class,
         webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class UserControllerSpec extends Specification {
