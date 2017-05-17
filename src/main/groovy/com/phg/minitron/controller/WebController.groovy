@@ -136,5 +136,18 @@ public class WebController {
         return "messages"
     }
 
+    @RequestMapping(value = "/deleteDevice", method = RequestMethod.POST)
+    public String deleteDevice(@RequestParam UUID deviceId, @RequestParam UUID userId, Model model) {
+        log.info("Attempting to delete a device with ID ${deviceId}")
+        deviceService.deleteDevice(deviceId)
+
+
+
+        ArrayList<Device> userDeviceList = deviceService.getDevicesForUser(userId)
+        model.addAttribute("deviceList", userDeviceList)
+        model.addAttribute("user", userService.getUserByUserId(userId.toString()))
+        return "main"
+    }
+
 
 }

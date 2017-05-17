@@ -1,7 +1,9 @@
 package com.phg.minitron.service
 
 import com.phg.minitron.dao.DeviceDao
+import com.phg.minitron.dao.MessageDao
 import com.phg.minitron.model.Device
+import com.phg.minitron.model.Message
 import spock.lang.Specification
 /**
  * Created by milesporter on 2/26/17.
@@ -102,5 +104,44 @@ class DeviceServiceSpec extends Specification{
         1 * deviceDao.getAllNonAssociatedDevices() >> deviceList
         0 * _
     }
+
+    def 'When I create a device I also create 12 messages'() {
+        given:
+        MessageDao messageDao = Mock(MessageDao)
+        deviceService.messageDao = messageDao
+
+        when:
+        deviceService.createDeviceForUser('dontcare',UUID.randomUUID())
+
+        then:
+        12 * messageDao.save(_)
+        1 * deviceDao.save(_)
+        0 * _
+    }
+
+    def 'I can delete a devices and its associated messages'() {
+        given:
+        MessageDao messageDao = Mock(MessageDao)
+        deviceService.messageDao = messageDao
+        UUID deviceId = UUID.randomUUID()
+        Message m1 = new Message(deviceId: deviceId)
+        Message m2 = new Message(deviceId: deviceId)
+        Message m3 = new Message(deviceId: deviceId)
+        ArrayList<Message> messages = [m1,m2,m3]
+
+        when:
+        deviceService.deleteDevice(deviceId)
+
+        then:
+        1 * messageDao.delete(m1)
+        1 * messageDao.delete(m2)
+        1 * messageDao.delete(m3)
+
+        1 * messageDao.getByDevice( deviceId.toString()) >> messages
+        1 * deviceDao.deleteDevice( deviceId.toString())
+        0 * _
+    }
+
+
 
 }

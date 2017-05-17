@@ -138,4 +138,19 @@ class DeviceDao extends BaseDao {
         return device
     }
 
+    boolean deleteDevice(String deviceId) {
+        boolean result = false
+        try {
+            PreparedStatement ps = getPreparedStatement("delete from device where deviceId=?")
+            ps.setString(1, deviceId)
+            ps.execute();
+            result = true;
+        } catch (Exception exp) {
+            log.error("Error deleting device by ID: " + exp.toString())
+        }
+        result
+    }
+
+
+
 }

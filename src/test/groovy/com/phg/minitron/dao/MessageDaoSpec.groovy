@@ -123,4 +123,20 @@ class MessageDaoSpec extends Specification{
         0 * _
     }
 
+    def 'I should be able to get a message by its id' (){
+        given:
+        UUID uuid = UUID.randomUUID()
+        PreparedStatement preparedStatement = Mock(PreparedStatement)
+
+        when:
+        messageDao.getByMessageId(uuid.toString())
+
+        then:
+        1 * connection.prepareStatement("Select message, channel, deviceId from message where messageId=?") >> preparedStatement
+        1 * preparedStatement.setString(1, uuid.toString())
+        1 * preparedStatement.executeQuery()
+        0 * _
+
+    }
+
 }

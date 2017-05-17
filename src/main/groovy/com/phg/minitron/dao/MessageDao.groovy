@@ -108,7 +108,6 @@ public class MessageDao extends BaseDao{
         return messages;
     }
 
-    //todo: test this/
     public Message getByMessageId(String messageId) {
         Message message = null
         try {

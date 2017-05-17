@@ -37,6 +37,7 @@
             <td>
                 <form action="deleteDevice" method="post">
                     <input type="hidden" name="deviceId" th:value="${device.deviceId}"/>
+                    <input type="hidden" name="userId" th:value="${user.userId}"/>
                     <input type="submit" value="Delete Device"/>
                 </form>
             </td>

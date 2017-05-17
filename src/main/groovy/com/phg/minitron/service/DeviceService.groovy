@@ -4,12 +4,14 @@ import com.phg.minitron.dao.DeviceDao
 import com.phg.minitron.dao.MessageDao
 import com.phg.minitron.model.Device
 import com.phg.minitron.model.Message
+import groovy.util.logging.Slf4j
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 
 /**
  * Created by milesporter on 2/27/17.
  */
+@Slf4j
 @Component
 class DeviceService {
 
@@ -63,5 +65,19 @@ class DeviceService {
 
     def getDeviceById(UUID deviceId) {
         deviceDao.getDeviceById(deviceId.toString())
+    }
+
+    def deleteDevice(UUID deviceId) {
+        boolean result = false
+        try {
+            ArrayList<Message> messages = messageDao.getByDevice(deviceId.toString())
+            messages.each() { message ->
+                messageDao.delete(message)
+            }
+            result = deviceDao.deleteDevice(deviceId.toString())
+        } catch (Exception exp) {
+            log.error("Error deleting device. ${exp.toString()}")
+        }
+        result
     }
 }
