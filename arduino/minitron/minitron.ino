@@ -11,16 +11,21 @@
 #include <SparkFunESP8266WiFi.h>
 
 //////////////////////////////
-// WiFi Network Definitions //
+// Constant Definitions //
 //////////////////////////////
-// Replace these two character strings with the name and
-// password of your WiFi network.
-const char mySSID[] = "rileytoed";
-const char myPSK[] = "11111111";
-const int buttonPin = 2;
+
+// Replace SSID and PWD with the appropriate values for
+// your WiFi network.
+const char mySSID[] = "SSID";
+const char myPSK[] = "PASSWD";
+
+// Replace DEVICE_CODE with your device code.
+const char deviceCode[] = "DEVICECODE";
+const int buttonPin = 5;
 
 // If you're using the full breakout...
 Adafruit_IS31FL3731 matrix = Adafruit_IS31FL3731();
+
 // If you're using the FeatherWing version
 //Adafruit_IS31FL3731_Wing matrix = Adafruit_IS31FL3731_Wing();
 
@@ -48,7 +53,7 @@ void initializeESP8266()
 
 
 void setup() {
-
+  pinMode(buttonPin, INPUT_PULLUP);
   Serial.begin(9600);
   Serial.println("ISSI manual animation test");
   if (! matrix.begin()) {
@@ -62,7 +67,7 @@ void setup() {
   // initializeESP8266() verifies communication with the WiFi
   // shield, and sets it up.
   initializeESP8266();
-
+  Serial.println("Initialization complete.");
   // connectESP8266() connects to the defined WiFi network.
   connectESP8266();
 
@@ -70,19 +75,6 @@ void setup() {
   // and the network it's connected to.
   displayConnectInfo();  
 
-  int buttonState = digitalRead(buttonPin);
-
-  // check if the pushbutton is pressed.
-  // if it is, the buttonState is HIGH:
-  while (buttonState == HIGH) {
-    // turn LED on:
-    channel+=1;
-    if(channel>=16) channel=0;
-    matrixPrint(String(channel));
-    Serial.println(String(channel));
-    buttonState = digitalRead(buttonPin);
-    delay(2000);
-  } 
 }
 
 void displayConnectInfo()
@@ -107,7 +99,7 @@ void displayConnectInfo()
 
 String getTheMessage()
 {
-  String httpRequest = "GET /message/G48UBHRSA/" + String(channel) + " HTTP/1.1\r\n"
+  String httpRequest = "GET /message/" + String(deviceCode) + "/" + String(channel) + " HTTP/1.1\r\n"
                        "Host: minitron.herokuapp.com\r\n\r\n";
                            //"Connection: close\r\n";              //Note that this fails on heroku.
 
@@ -118,7 +110,7 @@ String getTheMessage()
   if (retVal <= 0)
   {
     Serial.println(F("Failed to connect to server."));
-    String msg = "Comm failure.";
+    String msg = "...";
     return msg;
   }
 
@@ -167,7 +159,7 @@ void connectESP8266()
 }
   
 void matrixPrint(String str) {
-  if (str.length()==0) { str = "Server Failed.";}
+  if (str.length()==0) { str = "...";}
   for(int pos=0;pos<str.length();pos++) {
     char subc = str[pos];  
     //Serial.println("About to display: " + subc);
@@ -188,12 +180,25 @@ void matrixPrint(String str) {
 
 void loop() {
   Serial.println("Looping...");
+  int buttonState = digitalRead(buttonPin);
+  while (buttonState == LOW) {
+    channel+=1;
+    if(channel>=12) channel=0;
+    matrixPrint(String(channel));
+    Serial.println(String(channel));
+    buttonState = digitalRead(buttonPin);
+    delay(1500);
+  }
+  
   String theMessage = getTheMessage();
+  if(theMessage.length()>0) {
   for(int i=0;i<3;i++) {
     matrixPrint(theMessage);
-    matrixPrint(".. ");
+    matrixPrint("  "); 
+    }
+    delay(1000);
   }
-  delay(1000);
+  
 }
 
 
