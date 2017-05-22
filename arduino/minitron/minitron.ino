@@ -16,12 +16,12 @@
 
 // Replace SSID and PWD with the appropriate values for
 // your WiFi network.
-const char mySSID[] = "SSID";
-const char myPSK[] = "PASSWD";
+const char mySSID[] = "PUT_YOUR_SSID_HERE";
+const char myPSK[] = "PUT_YOUR_NETWORK_PASSWORD_HERE";
 
 // Replace DEVICE_CODE with your device code.
-const char deviceCode[] = "DEVICECODE";
-const int buttonPin = 5;
+const char deviceCode[] = "PUT_YOUR_DEVICE_CODE_HERE";
+const int buttonPin = 6;
 
 // If you're using the full breakout...
 Adafruit_IS31FL3731 matrix = Adafruit_IS31FL3731();
@@ -84,12 +84,20 @@ void displayConnectInfo()
   // esp8266.getAP() can be used to check which AP the
   // ESP8266 is connected to. It returns an error code.
   // The connected AP is returned by reference as a parameter.
-  int retVal = esp8266.getAP(connectedSSID);
-  if (retVal > 0)
+  int retVal = 0;
+  while (retVal <= 0)
   {
+    Serial.print("Attempting to connect to ");
+    Serial.print(connectedSSID);
+    retVal = esp8266.getAP(connectedSSID);
+    Serial.println("retVal: ");
+    Serial.println(retVal);
+    delay(3000);
+    
+  } 
+
     Serial.print(F("Connected to: "));
     Serial.println(connectedSSID);
-  }
 
   // esp8266.localIP returns an IPAddress variable with the
   // ESP8266's current local IP address.
@@ -103,17 +111,18 @@ String getTheMessage()
                        "Host: minitron.herokuapp.com\r\n\r\n";
                            //"Connection: close\r\n";              //Note that this fails on heroku.
 
-  Serial.println("About to request: " + httpRequest);
   ESP8266Client client;
 
-  int retVal = client.connect(destServer, 80);
-  if (retVal <= 0)
+  int retVal = 0;
+  while (retVal <= 0)
   {
-    Serial.println(F("Failed to connect to server."));
-    String msg = "...";
-    return msg;
+    Serial.println("About to request: " + httpRequest);
+    retVal = client.connect(destServer, 80);
+    delay(1000);
   }
 
+  Serial.println(F("Connected to server."));
+    
   // print and write can be used to send data to a connected
   // client connection.
   Serial.println("Making request...");
@@ -156,6 +165,7 @@ void connectESP8266()
       Serial.println(F("Error setting mode."));
     }
   }
+  esp8266.connect(mySSID, myPSK);
 }
   
 void matrixPrint(String str) {
