@@ -1,5 +1,4 @@
 #include <Wire.h>
-//#include <Adafruit_GFX.h>
 #include <Adafruit_IS31FL3731.h>
 
 //////////////////////
@@ -21,6 +20,8 @@ const char myPSK[] = "PUT_YOUR_NETWORK_PASSWORD_HERE";
 
 // Replace DEVICE_CODE with your device code.
 const char deviceCode[] = "PUT_YOUR_DEVICE_CODE_HERE";
+//  Double check that the button is plugged into digital pin 6
+//  or adjust as necessary.
 const int buttonPin = 6;
 
 // If you're using the full breakout...
@@ -68,13 +69,29 @@ void setup() {
   // shield, and sets it up.
   initializeESP8266();
   Serial.println("Initialization complete.");
-  // connectESP8266() connects to the defined WiFi network.
+  
+  // Connect to the defined WiFi network.
   connectESP8266();
 
   // displayConnectInfo prints the Shield's local IP
   // and the network it's connected to.
   displayConnectInfo();  
 
+}
+
+void connectESP8266()
+{
+  int retVal = esp8266.getMode();
+  if (retVal != ESP8266_MODE_STA)
+  { // If it's not in station mode.
+    retVal = esp8266.setMode(ESP8266_MODE_STA);
+    if (retVal < 0)
+    {
+      Serial.println(F("Error setting mode."));
+    }
+  }
+  //  Note that you can do esp8266.connect() if you want to connect to the "default" network.
+  esp8266.connect(mySSID, myPSK);
 }
 
 void displayConnectInfo()
@@ -154,20 +171,6 @@ String getTheMessage()
 }
 
 
-void connectESP8266()
-{
-  int retVal = esp8266.getMode();
-  if (retVal != ESP8266_MODE_STA)
-  { // If it's not in station mode.
-    retVal = esp8266.setMode(ESP8266_MODE_STA);
-    if (retVal < 0)
-    {
-      Serial.println(F("Error setting mode."));
-    }
-  }
-  esp8266.connect(mySSID, myPSK);
-}
-  
 void matrixPrint(String str) {
   if (str.length()==0) { str = "...";}
   for(int pos=0;pos<str.length();pos++) {
